@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{float}
+\begin{document}
+
+
+\begin{titlepage}
+\begin{center}
+{\Huge Multimedia Information Retrival and Computer Vision \par}
+\vspace{18mm}
+{\huge Alice Nannini \par}
+{\huge Marco Parola \par}
+{\huge Stefano Poleggi \par}
+\vspace{18mm}
+A.Y. 2020-2021
+\end{center}
+
+\end{titlepage}
+
+% ----- INDICE -----
+\tableofcontents\thispagestyle{empty}
+\clearpage
+
+
+% --------------------------------------- INTRO -------------------------------------------------------
+\section{Introduction}
+In this project we implemented a Web Search Engine working on "ArtImages" dataset and "MirFlickr" dataset as distractor. 
+The Web Search Engine is based on the Locality Sensitive Hashing (LSH) index and on the pre-trained convolutional neural network ResNet50 with weigths computed on the "Imagenet" dataset.
+
+
+\section{Data Analysis and Preprocessing}
+The Art dataset is composed of 5 categories of images, corresponding to the 5 classes:
+\begin{itemize}
+\item Engraving
+\item Sculpture 
+\item Iconography
+\item Painting 
+\item Drawings
+\end{itemize}
+\subsection{Data cleaning}
+After a preliminary analysis of the dataset, we realized that some images are corrupted both on trainingset and validationset, so we detected and deleted them using the following script.
+
+\begin{verbatim}
+from PIL import Image
+import glob
+
+for filename in os.listdir(VALIDATION_DATA):  
+    try:
+      image.load_img(VALIDATION_DATA + filename, target_size=(300, 300))
+
+    except :
+      print("ERROR" + VALIDATION_DATA + filename)
+      os.remove(VALIDATION_DATA + filename)
+\end{verbatim}
+The following figures show the distribution of the classes of the trainigset, after the execution of the snippet of code shown above :\\
+
+\begin{minipage}{0.45\textwidth}
+	\begin{center}
+	\includegraphics[scale=0.22]{./img/train_hinstogram.png}
+	\end{center}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+	\centering
+	\includegraphics[scale=0.22]{./img/train_pie.png}
+\end{minipage}
+\vspace{3mm}
+The following figures show the distribution of the classes of the validationset, after the execution of the snippet of code shown above :\\
+
+
+\begin{minipage}{0.45\textwidth}
+	\begin{center}
+	\includegraphics[scale=0.22]{./img/val_hinstogram.png}
+	\end{center}
+\end{minipage}
+
+\begin{minipage}{0.45\textwidth}
+	\centering
+	\includegraphics[scale=0.22]{./img/val_pie.png}
+\end{minipage}
+
+
+\clearpage
+
+\section{Sequential Scannig}
+The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity distance:
+\begin{itemize}
+\item Euclidian distance
+\item Cosine similarity
+\item Hamming distance
+\end{itemize}
+
+\end{document}

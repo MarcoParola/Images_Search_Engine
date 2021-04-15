@@ -1,0 +1,199 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  15 APR 2021 17:27
+entering extended mode
+**./doc.tex
+(doc.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count177
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\c@figure=\count183
+\c@table=\count184
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen139
+\Gin@req@width=\dimen140
+) (C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count185
+\float@exts=\toks18
+\float@box=\box47
+\@float@everytoks=\toks19
+\@floatcapt=\box48
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count186
+\l__pdf_internal_box=\box49
+) (doc.aux)
+\openout1 = `doc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count187
+\scratchdimen=\dimen141
+\scratchbox=\box50
+\nofMPsegments=\count188
+\nofMParguments=\count189
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count190
+\MPscratchDim=\dimen142
+\MPnumerator=\count191
+\makeMPintoPDFobject=\count192
+\everyMPtoPDFconversion=\toks21
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+) [1
+
+{C:/Users/marco/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(doc.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write3
+\openout3 = `doc.toc'.
+
+ [1]
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 55--55
+[]      \OT1/cmtt/m/n/10 image.load_img(VALIDATION_DATA + filename, target_size
+=(300, 300))[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+<./img/train_hinstogram.png, id=12, 1204.5pt x 803.0pt>
+File: ./img/train_hinstogram.png Graphic file (type png)
+<use ./img/train_hinstogram.png>
+Package pdftex.def Info: ./img/train_hinstogram.png  used on input line 60.
+(pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
+
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 60--61
+ [] 
+ []
+
+[2
+
+]
+<./img/train_pie.png, id=19, 1204.5pt x 803.0pt>
+File: ./img/train_pie.png Graphic file (type png)
+<use ./img/train_pie.png>
+Package pdftex.def Info: ./img/train_pie.png  used on input line 66.
+(pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
+
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 66--67
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--70
+
+ []
+
+<./img/val_hinstogram.png, id=20, 1204.5pt x 803.0pt>
+File: ./img/val_hinstogram.png Graphic file (type png)
+<use ./img/val_hinstogram.png>
+Package pdftex.def Info: ./img/val_hinstogram.png  used on input line 74.
+(pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
+
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 74--75
+ [] 
+ []
+
+[3 <./img/train_hinstogram.png> <./img/train_pie.png>]
+<./img/val_pie.png, id=26, 1204.5pt x 803.0pt>
+File: ./img/val_pie.png Graphic file (type png)
+<use ./img/val_pie.png>
+Package pdftex.def Info: ./img/val_pie.png  used on input line 80.
+(pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
+
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+[4 <./img/val_hinstogram.png> <./img/val_pie.png>] [5
+
+] (doc.aux) ) 
+Here is how much of TeX's memory you used:
+ 1300 strings out of 479618
+ 20239 string characters out of 2865026
+ 295545 words of memory out of 3000000
+ 18501 multiletter control sequences out of 15000+200000
+ 406049 words of font info for 36 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 68i,7n,74p,200b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\tcrm1000.pk><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/marco/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marco/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marco/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on doc.pdf (6 pages, 287302 bytes).
+PDF statistics:
+ 55 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
