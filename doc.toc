@@ -1,4 +1,21 @@
 \contentsline {section}{\numberline {1}Introduction}{2}{}%
 \contentsline {section}{\numberline {2}Data Analysis and Preprocessing}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Data cleaning}{2}{}%
-\contentsline {section}{\numberline {3}Sequential Scannig}{5}{}%
+\contentsline {section}{\numberline {3}Extract features from the images}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Features Extraction approach}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Fine Tuning approach}{6}{}%
+\contentsline {subsection}{\numberline {3.3}Resnet50}{6}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Model 1}{6}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Model 2}{7}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Model 3}{8}{}%
+\contentsline {subsubsection}{\numberline {3.3.4}Model 4}{8}{}%
+\contentsline {subsubsection}{\numberline {3.3.5}Model 5}{9}{}%
+\contentsline {subsubsection}{\numberline {3.3.6}Conclusion}{10}{}%
+\contentsline {subsection}{\numberline {3.4}Resnet50v2}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Model 1}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Model 1}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.3}Model 2}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.4}Model 3}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.5}Model 4}{11}{}%
+\contentsline {subsubsection}{\numberline {3.4.6}Model 5}{11}{}%
+\contentsline {section}{\numberline {4}Sequential Scannig}{12}{}%

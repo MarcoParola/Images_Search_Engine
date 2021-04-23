@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  15 APR 2021 17:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  22 APR 2021 17:27
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -114,23 +114,23 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `doc.toc'.
 
  [1]
-Overfull \hbox (32.9967pt too wide) in paragraph at lines 55--55
+Overfull \hbox (32.9967pt too wide) in paragraph at lines 57--57
 []      \OT1/cmtt/m/n/10 image.load_img(VALIDATION_DATA + filename, target_size
 =(300, 300))[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
 <./img/train_hinstogram.png, id=12, 1204.5pt x 803.0pt>
 File: ./img/train_hinstogram.png Graphic file (type png)
 <use ./img/train_hinstogram.png>
-Package pdftex.def Info: ./img/train_hinstogram.png  used on input line 60.
+Package pdftex.def Info: ./img/train_hinstogram.png  used on input line 62.
 (pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
 
-Overfull \hbox (109.74187pt too wide) in paragraph at lines 60--61
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 62--63
  [] 
  []
 
@@ -140,25 +140,25 @@ Overfull \hbox (109.74187pt too wide) in paragraph at lines 60--61
 <./img/train_pie.png, id=19, 1204.5pt x 803.0pt>
 File: ./img/train_pie.png Graphic file (type png)
 <use ./img/train_pie.png>
-Package pdftex.def Info: ./img/train_pie.png  used on input line 66.
+Package pdftex.def Info: ./img/train_pie.png  used on input line 68.
 (pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
 
-Overfull \hbox (109.74187pt too wide) in paragraph at lines 66--67
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 68--69
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--70
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
 
  []
 
 <./img/val_hinstogram.png, id=20, 1204.5pt x 803.0pt>
 File: ./img/val_hinstogram.png Graphic file (type png)
 <use ./img/val_hinstogram.png>
-Package pdftex.def Info: ./img/val_hinstogram.png  used on input line 74.
+Package pdftex.def Info: ./img/val_hinstogram.png  used on input line 76.
 (pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
 
-Overfull \hbox (109.74187pt too wide) in paragraph at lines 74--75
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 76--77
  [] 
  []
 
@@ -166,34 +166,114 @@ Overfull \hbox (109.74187pt too wide) in paragraph at lines 74--75
 <./img/val_pie.png, id=26, 1204.5pt x 803.0pt>
 File: ./img/val_pie.png Graphic file (type png)
 <use ./img/val_pie.png>
-Package pdftex.def Info: ./img/val_pie.png  used on input line 80.
+Package pdftex.def Info: ./img/val_pie.png  used on input line 82.
 (pdftex.def)             Requested size: 264.99081pt x 176.66054pt.
 
-Overfull \hbox (109.74187pt too wide) in paragraph at lines 80--81
+Overfull \hbox (109.74187pt too wide) in paragraph at lines 82--83
  [][] 
  []
 
-[4 <./img/val_hinstogram.png> <./img/val_pie.png>] [5
+[4 <./img/val_hinstogram.png> <./img/val_pie.png>]
+Overfull \hbox (6.74693pt too wide) in paragraph at lines 125--125
+[]\OT1/cmtt/m/n/10 def extract_features(extractor, generator, sample_count, dim
+=2048):[] 
+ []
 
-] (doc.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--132
+
+ []
+
+[5
+
+]
+<./img/models/model1_acc.png, id=36, 373.395pt x 264.99pt>
+File: ./img/models/model1_acc.png Graphic file (type png)
+<use ./img/models/model1_acc.png>
+Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 166.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 166--167
+ [][] 
+ []
+
+<./img/models/model1_loss.png, id=37, 373.395pt x 264.99pt>
+File: ./img/models/model1_loss.png Graphic file (type png)
+<use ./img/models/model1_loss.png>
+Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 170.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 170--171
+ [][] 
+ []
+
+[6] [7 <./img/models/model1_acc.png> <./img/models/model1_loss.png>] [8]
+<./img/models/model4_acc.png, id=50, 373.395pt x 264.99pt>
+File: ./img/models/model4_acc.png Graphic file (type png)
+<use ./img/models/model4_acc.png>
+Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 274.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 274--275
+ [][] 
+ []
+
+<./img/models/model4_loss.png, id=51, 373.395pt x 264.99pt>
+File: ./img/models/model4_loss.png Graphic file (type png)
+<use ./img/models/model4_loss.png>
+Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 278.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 278--279
+ [][] 
+ []
+
+[9 <./img/models/model4_acc.png> <./img/models/model4_loss.png>]
+<./img/models/model5_acc.png, id=57, 373.395pt x 264.99pt>
+File: ./img/models/model5_acc.png Graphic file (type png)
+<use ./img/models/model5_acc.png>
+Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 308.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 308--309
+ [][] 
+ []
+
+<./img/models/model5_loss.png, id=58, 373.395pt x 264.99pt>
+File: ./img/models/model5_loss.png Graphic file (type png)
+<use ./img/models/model5_loss.png>
+Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 312.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (16.51483pt too wide) in paragraph at lines 312--313
+ [][] 
+ []
+
+[10 <./img/models/model5_acc.png> <./img/models/model5_loss.png>] [11
+
+] [12
+
+]
+(doc.aux) ) 
 Here is how much of TeX's memory you used:
- 1300 strings out of 479618
- 20239 string characters out of 2865026
- 295545 words of memory out of 3000000
- 18501 multiletter control sequences out of 15000+200000
- 406049 words of font info for 36 fonts, out of 3000000 for 9000
+ 1341 strings out of 479618
+ 21327 string characters out of 2865026
+ 301547 words of memory out of 3000000
+ 18534 multiletter control sequences out of 15000+200000
+ 406395 words of font info for 37 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,7n,74p,200b,221s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
-dpi600\tcrm1000.pk><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/marco/AppData/Local/Programs/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marco/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marco/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on doc.pdf (6 pages, 287302 bytes).
+ 68i,8n,74p,268b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\tcrm1000.pk><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx12.pfb><C:/Users/marco/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/marco/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/marco/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/marco/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on doc.pdf (13 pages, 378029 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 95 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
