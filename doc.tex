@@ -1,7 +1,14 @@
-\documentclass{article}
+\documentclass[11pt,a4paper,oneside]{article}
+\usepackage[a4paper,top=2cm,bottom=2.5cm,left=2.5cm,right=2cm]{geometry}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{frontespizio}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{subfig}
+\usepackage[english]{varioref}
+\usepackage{csquotes}
 \begin{document}
 
 
@@ -25,7 +32,7 @@ A.Y. 2020-2021
 
 % --------------------------------------- INTRO -------------------------------------------------------
 \section{Introduction}
-In this project we implemented a Web Search Engine working on "ArtImages" dataset and "MirFlickr" dataset as distractor. 
+In this project we implemented a Web Search Engine working on the "ArtImages" dataset, and the "MirFlickr" dataset as distractor. 
 The Web Search Engine is based on the \textbf{Locality Sensitive Hashing} (LSH) index and on the pre-trained convolutional neural network ResNet50 with weigths computed on the "Imagenet" dataset.
 
 
@@ -34,14 +41,14 @@ The Web Search Engine is based on the \textbf{Locality Sensitive Hashing} (LSH) 
 \section{Data Analysis and Preprocessing}
 The Art dataset is composed of 5 categories of images, corresponding to the 5 classes:
 \begin{itemize}
+\item Drawings
 \item Engraving
-\item Sculpture 
 \item Iconography
 \item Painting 
-\item Drawings
+\item Sculpture 
 \end{itemize}
 \subsection{Data cleaning}
-After a preliminary analysis of the dataset, we realized that some images are corrupted both on trainingset and validationset, so we detected and deleted them using the following script.
+After a preliminary analysis of the dataset, we realized that some images were corrupted, both on the training set and the validation set, so we detected and deleted them using the following script.
 
 \begin{verbatim}
 from PIL import Image
@@ -55,37 +62,46 @@ for filename in os.listdir(VALIDATION_DATA):
       print("ERROR" + VALIDATION_DATA + filename)
       os.remove(VALIDATION_DATA + filename)
 \end{verbatim}
-The following figures show the distribution of the classes of the trainigset, after the execution of the snippet of code shown above :\\
+The following figures show the distribution of the classes of the trainig set, after the execution of the snippet of code shown above :\\
 
-\begin{minipage}{0.45\textwidth}
-	\begin{center}
-	\includegraphics[scale=0.22]{./img/train_hinstogram.png}
-	\end{center}
-\end{minipage}
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/train_hinstogram.png}
+		\label{fig:}
+	\end{minipage}
+	\hspace{5mm}%
+	\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/train_pie.png}
+		\label{fig:scratch_matrix}
+	\end{minipage}%
+\end{figure}
 
-\begin{minipage}{0.45\textwidth}
-	\centering
-	\includegraphics[scale=0.22]{./img/train_pie.png}
-\end{minipage}
-\vspace{3mm}
+\vspace{10mm}
 The following figures show the distribution of the classes of the validationset, after the execution of the snippet of code shown above :\\
 
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.46\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/val_hinstogram.png}
+		\label{fig:}
+	\end{minipage}
+	\hspace{5mm}%
+	\begin{minipage}[c]{.46\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/val_pie.png}
+		\label{fig:scratch_matrix}
+	\end{minipage}%
+\end{figure}
 
-\begin{minipage}{0.45\textwidth}
-	\begin{center}
-	\includegraphics[scale=0.22]{./img/val_hinstogram.png}
-	\end{center}
-\end{minipage}
-
-\begin{minipage}{0.45\textwidth}
-	\centering
-	\includegraphics[scale=0.22]{./img/val_pie.png}
-\end{minipage}
 
 \clearpage
 
 % ---------------------------------- FEATURES EXTRACTION -------------------------------------
-\section{Extract features from the images}
+\section{Extract the features from the images}
 During this phase we extracted the features from the images and we stored them in order to reload them as numpy-array when it is necessary.\\
 The pretrained convolutional neural networks used are:
 \begin{itemize}
@@ -95,7 +111,7 @@ The pretrained convolutional neural networks used are:
 
 \subsection{Features Extraction approach}
 In this phase we extracted the features from the images using the pretrained convolutional neural networks \textbf{Resnet50} and \textbf{Resnet50v2} trained on \textit{Imagenet} dataset, adopting a fetures extraction approach.\\
-The following snippet of code shows the extraction of the trainingset using Resnet50, the same script is been used also with Resnet50v2 and for the validationset and distractor.
+The following snippet of code shows the extraction of the training set using Resnet50, the same script is been used also with Resnet50v2 and for the validation set and the distractor.
 \begin{verbatim}
 
 def extract_features(extractor, generator, sample_count, dim=2048):
@@ -128,7 +144,7 @@ np.save(FILE_TRAINING_FEATURES, training_features)
 During this phase we carried out several tests using different hyperparameters for the fully connected part added at the end both of the networks Resnet50 and Resnet50v2.\\
 We compute this phase adopting a trial and error approach, trying different hyperparameter values for the fully connected neural network appended to the pretrained convolutional one and we compared the performance.\\
 We stopped the training exploiting an \textit{early stopping condition}, monitoring the loss function and setting the patience value equal to 10 and restoring the weights to 10 epochs before.\\
-The following subparagraphs show only the most relevant experiments, we didn't report all of them, in order to avoid some redundancies.\\
+The following subparagraphs show only the most relevant experiments, we didn't report all of them in order to avoid some redundancies.\\
 
 \subsection{Resnet50}
 \subsubsection{Model 1}
@@ -139,10 +155,9 @@ In this trial we trained the pretrained network Resnet50, we appended a fully co
 \item Activation function: softmax
 \item Learning rate: 1e-3
 \end{itemize}
-
+These are the obtained results on the validation set we used to test the network:
 \begin{verbatim}
-
-	precision    recall  f1-score   support
+    precision    recall  f1-score   support
 
          0.0       0.59      0.39      0.47       122
          1.0       0.63      0.77      0.70        84
@@ -173,7 +188,7 @@ acc_test : 0.7616822719573975
 
 
 \subsubsection{Model 2}
-Looking at the accuacy plot of the first experiment, we can observe the presence of overfitting phenomenon; in order to reduce this problem, we added some \textit{Dropout Layer}.\\
+Looking at the accuacy plot of the first experiment, we can observe the presence of the overfitting phenomenon; in order to reduce this problem, we added some \textit{Dropout Layers} and reduced the learning rate.\\
 So in the second trial we trained the pretrained network Resnet50, we appended a fully connected part defined by the following hyperparameter:
 \begin{itemize}
 \item Unfreezed layers from conv5\_block1\_1\_conv
@@ -185,9 +200,9 @@ So in the second trial we trained the pretrained network Resnet50, we appended a
 \item Activation function: softmax
 \item Learning rate: 1e-4
 \end{itemize}
-
+The obtained results are the following:
 \begin{verbatim}
-	precision    recall  f1-score   support
+    precision    recall  f1-score   support
 
          0.0       0.47      0.33      0.39       122
          1.0       0.70      0.56      0.62        84
@@ -203,10 +218,10 @@ loss_test : 0.9764283299446106
 acc_test : 0.5934579372406006
 
 \end{verbatim}
-
+The addition of the dropout did not seem to bring any improvement: on the contrary, the performance of the model is lower. So we tried a new test by removing these dropout levels and adding new FC levels.
 
 \subsubsection{Model 3}
-In the third trial we trained the pretrained network Resnet50, we appended a fully connected part defined by the following hyperparameter:
+In the third trial, we trained the pretrained network Resnet50, adding a fully connected part defined by the following hyperparameter:
 \begin{itemize}
 \item Unfreezed layers from conv5\_block1\_1\_conv
 \item 1 dense layer composed by 512 neurons
@@ -216,9 +231,10 @@ In the third trial we trained the pretrained network Resnet50, we appended a ful
 \item Activation function: softmax
 \item Learning rate: 1e-4
 \end{itemize}
-
+\vspace{3mm}
+Again, these are the results we obtained from the trial:
 \begin{verbatim}
-	precision    recall  f1-score   support
+    precision    recall  f1-score   support
 
          0.0       0.67      0.02      0.03       122
          1.0       0.69      0.39      0.50        84
@@ -234,9 +250,10 @@ loss_test : 0.9576621651649475
 acc_test : 0.605140209197998
 
 \end{verbatim}
+The network performance remained similar to the previous attempt.
 
 \subsubsection{Model 4}
-In the fourth trial we trained the pretrained network Resnet50, in order to better generalize the dataset, so we appended a fully connected part defined by the following hyperparameter:
+In the fourth trial we trained the pretrained network Resnet50, in order to better generalize the dataset, so we appended a fully connected part defined by the following hyperparameters:
 \begin{itemize}
 \item Unfreezed layers from conv5\_block1\_1\_conv
 \item Dropout layer, rate: 0.5
@@ -278,9 +295,10 @@ acc_test : 0.8072429895401001
         \includegraphics[scale=0.46]{./img/models/model4_loss.png}
     \end{minipage}
 \end{figure}
+We can see from the results that this is the best model so far, with an overall accuracy of $81\%$: in addition to the adjustment of the dropout and dense levels, this is due to the further lowering of the learning rate. Also the graphs show a decisive improvement of the overfitting.
 
 \subsubsection{Model 5}
-In the fifth trial we trained the pretrained network Resnet50, where we appended the same fully connected part of the previous experiment applying a data augmentation technique, in order to better generalize the dataset.
+In the fifth trial, we trained the Resnet50 convolutional base, where we appended the same fully connected part of the previous experiment applying a data augmentation technique, in order to better generalize the dataset.
 
 \begin{verbatim}
 
@@ -312,6 +330,8 @@ acc_test : 0.7675233483314514
         \includegraphics[scale=0.46]{./img/models/model5_loss.png}
     \end{minipage}
 \end{figure}
+\vspace{3mm}
+The performance did not improve, in fact a slight underfitting appeared.
 
 \subsubsection{Conclusion}
 \begin{center}
@@ -331,18 +351,67 @@ Model 5 & 0.7675 & 0.6571 &  & & \\
 
 \clearpage
 \subsection{Resnet50v2}
+For this convolutional base, we performed the tests by resuming the fully connected blocks used in the previous step. We just report the obtained results, since all the hyperparameters can be consulted in the previous section.
+
 \subsubsection{Model 1}
-In this trial we trained the pretrained network Resnet50, we appended a fully connected part defined by the following hyperparameter:
-\begin{itemize}
-\item Unfreezed layers from conv5\_block1\_1\_conv
-\item 1 dense layer composed by 256 neurons
-\item Activation function: softmax
-\item Learning rate: 1e-3
-\end{itemize}
-\subsubsection{Model 1}
+
+\begin{verbatim}
+    precision    recall  f1-score   support
+
+         0.0       0.75      0.70      0.72       122
+         1.0       0.90      0.63      0.74        84
+         2.0       0.91      1.00      0.95       231
+         3.0       0.95      0.96      0.96       228
+         4.0       0.93      0.97      0.95       191
+
+    accuracy                           0.90       856
+   macro avg       0.89      0.85      0.86       856
+weighted avg       0.90      0.90      0.90       856
+
+loss_test : 0.779442548751831  
+acc_test : 0.9030373692512512
+\end{verbatim}
+
 \subsubsection{Model 2}
+
+\begin{verbatim}
+    precision    recall  f1-score   support
+
+         0.0       0.76      0.53      0.62       122
+         1.0       0.74      0.69      0.72        84
+         2.0       0.90      1.00      0.94       231
+         3.0       0.90      0.96      0.93       228
+         4.0       0.96      0.98      0.97       191
+
+    accuracy                           0.89       856
+   macro avg       0.85      0.83      0.84       856
+weighted avg       0.88      0.89      0.88       856
+
+loss_test : 0.5550180077552795  
+acc_test : 0.8855140209197998
+\end{verbatim}
+
 \subsubsection{Model 3}
+
+\begin{verbatim}
+    precision    recall  f1-score   support
+
+         0.0       0.70      0.72      0.71       122
+         1.0       0.96      0.56      0.71        84
+         2.0       0.91      1.00      0.95       231
+         3.0       0.93      0.96      0.94       228
+         4.0       0.96      0.96      0.96       191
+
+    accuracy                           0.90       856
+   macro avg       0.89      0.84      0.85       856
+weighted avg       0.90      0.90      0.89       856
+
+loss_test : 0.5826641917228699  
+acc_test : 0.8971962332725525
+\end{verbatim}
+
 \subsubsection{Model 4}
+
 \subsubsection{Model 5}
 
 
