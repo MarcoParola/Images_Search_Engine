@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  23 APR 2021 10:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  23 APR 2021 12:08
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -455,9 +455,9 @@ ers\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.
 pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
 \ecrm2488.pk><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb>
-Output written on doc.pdf (13 pages, 390205 bytes).
+Output written on doc.pdf (13 pages, 391726 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
+ 393 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

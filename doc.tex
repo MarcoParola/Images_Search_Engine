@@ -421,14 +421,25 @@ acc_test : 0.8971962332725525
 
 
 % ----------------------------------- SEQUENTIAL SCANNING -----------------------------------
-\section{Sequential Scannig}
+\section{Sequential Scanning}
 The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity distance:
 \begin{itemize}
 \item Euclidian distance
 \item Cosine similarity
-\item Hamming distance
+%\item Hamming distance
 \end{itemize}
-We 
+We performed the evaluation of the sequential search function, based on the validation set, so that we could have data on which to compare the performance of the LSH index. 
+The evaluation was done by calculating the mean Average Precision (mAP) metric, using the features extracted from both Resnet50 and Resnet50v2. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.
 
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+Resnet50 & 0.306 & 1.083 & 0.309 & 0.999 & 32791 \\
+Resnet50v2 & 0.351 & 17.977 & 0.343 & 0.747 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
 
 \end{document}
