@@ -9,6 +9,7 @@
 \usepackage{subfig}
 \usepackage[english]{varioref}
 \usepackage{csquotes}
+\usepackage{amsmath}
 \begin{document}
 
 
@@ -333,6 +334,35 @@ acc_test : 0.7675233483314514
 \vspace{3mm}
 The performance did not improve, in fact a slight underfitting appeared.
 
+
+%------------------------- SEQUENTIAL SEARCH -----------------------
+\section{Sequential search}
+During the first information retrieval tests on this Art dataset, we performed a sequential scan and we measured some metrics, in order to have some starting performances to compare them with those calculated when we will introduce the LSH index.\\
+We used the images of the dataset as follow:
+\begin{itemize}
+\item Trainingset and Distractor are combined as data on which to perform the search algorithm
+\item Validationset images are used as queries to perform the search
+\end{itemize}
+The metric used to measure the goodness of the research is \textbf{mean Average Precision} (mAP).
+Given an image \textbf{q} as query we computed the \textbf{average precision} (AP)
+\begin{displaymath}
+AP(q) = \frac{\sum_{k=1}^n Precision(Res_{k}(q))}{n}
+\end{displaymath}
+Where
+
+
+\begin{equation*}
+\text{Res(q) = top k element retrieved using q as query }
+\end{equation*}
+and
+\begin{equation*}
+  Precision(Res_{k}(q)) = \begin{cases}
+    1, & \text{if elem\textsubscript{k} is relevant}.\\
+    0, & \text{otherwise}.
+  \end{cases}
+\end{equation*}
+
+
 \subsubsection{Conclusion}
 \begin{center}
 \begin{tabular}{|l|ccccc|}
@@ -430,6 +460,7 @@ The first implementation of our image search engine is based on a numpy array as
 \end{itemize}
 We performed the evaluation of the sequential search function, based on the validation set, so that we could have data on which to compare the performance of the LSH index. 
 The evaluation was done by calculating the mean Average Precision (mAP) metric, using the features extracted from both Resnet50 and Resnet50v2. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.
+
 
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
