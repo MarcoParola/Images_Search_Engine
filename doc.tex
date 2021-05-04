@@ -10,6 +10,9 @@
 \usepackage[english]{varioref}
 \usepackage{csquotes}
 \usepackage{amsmath}
+\usepackage{mathtools}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+
 \begin{document}
 
 
@@ -101,8 +104,68 @@ The following figures show the distribution of the classes of the validationset,
 
 \clearpage
 
+
+%------------------------- SEQUENTIAL SEARCH -----------------------
+\section{Sequential search}
+The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity distance:
+
+\begin{itemize}
+\item Euclidian distance
+\item Cosine similarity
+\end{itemize}
+
+We performed the evaluation of the sequential search function, based on the validation set, so that we could have some starting data to compare with respect to the performance of the LSH index. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.\\
+We used the images of the dataset as follow:
+\begin{itemize}
+\item Trainingset and Distractor are combined as data on which to perform the search algorithm
+\item Validationset images are used as queries to perform the search
+\end{itemize}
+The metric used to measure the goodness of the research is \textbf{mean Average Precision} (mAP).
+Given an image \textbf{q} as query we computed the \textbf{average precision} (AP)\\
+\vspace{2mm}
+\begin{displaymath}
+AP(q) = \frac{\sum_{k=1}^n Precision(Res_{k}(q))}{n}
+\end{displaymath}
+Where
+
+
+\begin{equation*}
+\text{Res(q) = top k element retrieved using q as query }
+\end{equation*}
+and
+\vspace{2mm}
+\begin{equation*}
+  Precision(Res_{k}(q)) = \begin{cases}
+    1, & \text{if elem\textsubscript{k} is relevant}.\\
+    0, & \text{otherwise}.
+  \end{cases}
+\end{equation*}
+
+
+\clearpage
+
+%---------------------------------- LSH INDEX ------------------------------------
+\section{LSH Index}
+The final image search engine is based on a \textbf{Locality Sensitive Hashing} (LSH) index.\\
+This index stores data in buckets. The intuition on which this data structure is based is that similar images will be stored in the same bucket with high probability.\\
+This could be done building different hash functions \textbf{g()}, where each of them is defined exploiting the concept of random projections; more formally as
+\begin{displaymath}
+g(p) = < h_{1}(p),\ ... \ , h_{k}(p) >
+\end{displaymath}
+Where each element h\textsubscript{i}() is defined as
+\begin{equation*}
+h\textsubscript{i}(p) = \floor{(p * X\textsubscript{i} + b\textsubscript{i}) / w} \ \ \ \ \ \ i = 1 ... k 
+\end{equation*}
+and represents a hyperplane described by \textit{X\textsubscript{i}} and \textit{b}, while \textit{w} is the length of the segments in which the hyperplanes are divided.\\
+We defined \textit{L} hash functions, corresponding to \textit{L} buckets, then each image is inserted in a bucket for each of the \textit{L} hash functions.
+When a query is passed to the search engine, its features are hashed using each g function and the corresponding buckets are identified. The elements belonging to them are retrieved and sorted, in order to select the top-k more similar to the query.
+
+
+\clearpage
+
 % ---------------------------------- FEATURES EXTRACTION -------------------------------------
-\section{Extract the features from the images}
+\section{Features extraction}
+
 During this phase we extracted the features from the images and we stored them in order to reload them as numpy-array when it is necessary.\\
 The pretrained convolutional neural networks used are:
 \begin{itemize}
@@ -110,8 +173,16 @@ The pretrained convolutional neural networks used are:
 \item ResNet50v2
 \end{itemize}
 
-\subsection{Features Extraction approach}
+
 In this phase we extracted the features from the images using the pretrained convolutional neural networks \textbf{Resnet50} and \textbf{Resnet50v2} trained on \textit{Imagenet} dataset, adopting a fetures extraction approach.\\
+The strength of this convolutional neural network is the skip connection: the figure on the left is stacking convolution layers together one after the other. On the right we still stack convolution layers as before but we now also add the original input to the output of the convolution block. This is called skip connection.\\
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[scale=0.46]{./img/skip_connection.png}
+    \end{minipage}
+\vspace{2mm}
+\end{figure}
 The following snippet of code shows the extraction of the training set using Resnet50, the same script is been used also with Resnet50v2 and for the validation set and the distractor.
 \begin{verbatim}
 
@@ -141,7 +212,105 @@ np.save(FILE_TRAINING_FEATURES, training_features)
 
 \end{verbatim}
 
-\subsection{Fine Tuning approach}
+
+
+\subsection{Resnet50}
+\subsubsection{Sequential search after Features Extraction, using Resnet50}
+During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a features extraction technique and we computed a sequential scan, obtaining the following results:
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+Resnet50 & 0.306 & 1.083 & 0.309 & 0.999 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{2mm}
+
+
+\subsubsection{LSH Index after Features Extraction, using Resnet50}
+During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a fine tuning technique and we computed a kNN search setting w=4, obtaining the following results:
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+\textbf{g=5 h=2} & \textbf{0.309} & \textbf{1.216} & \textbf{0.318} & \textbf{0.999}  & \textbf{5701 }\\
+g=6 h=2 & 0.303 & 1.227 & 0.308 & 0.999  & 4836 \\
+g=7 h=2 & 0.297 & 1.206 & 0.303 & 0.999  & 4872 \\
+g=7 h=6 & 0.281 & 1.518 & 0.284 & 0.998  & 1647 \\
+g=3 h=4 & 0.294 & 1.376 & 0.293 & 0.998  & 2686 \\
+\hline
+\end{tabular}
+\end{center}
+We tested the LSH index also with different values of \textit{w}, but we conclude that w=4 is the best values with Resnet50, because using lower values the buckets are sparse, while increasing \textit{w} the mAP remains constant.
+\vspace{2mm}
+
+% ------------
+\subsection{Resnet50v2}
+\subsubsection{Sequential search after Features Extraction, using Resnet50v2}
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a features extraction technique and we computed a sequential scan, obtaining the following results:
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+Resnet50v2 & 0.351 & 17.977 & 0.343 & 0.747 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{2mm}
+
+
+
+\subsubsection{LSH Index after Features Extraction, using Resnet50v2}
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a fine tuning technique and we computed a kNN search, obtaining the following results:
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+g=3 h=2 & 0.369 & 22.772 & 0.375 & 0.619   & 477 \\
+\textbf{g=3 h=3} & \textbf{0.415} & \textbf{27.532} & \textbf{0.412} & \textbf{0.490}  & \textbf{79} \\
+g=3 h=4 & 0.334 & 29.709 & 0.349 & 0.409   & 25 \\ 
+\hline
+g=4 h=2 & 0.360 & 22.285 & 0.361 & 0.634   & 430 \\
+g=4 h=3 & 0.353 & 27.865 & 0.354 & 0.474   & 71 \\
+g=4 h=4 & 0.287 & 29.658 & 0.297 & 0.411   & 27 \\
+\hline
+g=5 h=2 & 0.311 & 22.456 & 0.309 & 0.627   & 464 \\
+g=5 h=3 & 0.368 & 26.175 & 0.373 & 0.527   & 121 \\
+g=5 h=4 & 0.263 & 28.903 & 0.278 & 0.432   & 23 \\
+\hline
+g=6 h=2 & 0.357 & 21.995 & 0.367 & 0.639   & 568 \\
+g=6 h=3 & 0.350 & 26.748 & 0.347 & 0.513   & 88 \\
+g=6 h=4 & 0.282 & 27.908 & 0.289 & 0.457   & 23 \\
+\hline
+g=7 h=2 & 0.357 & 22.128 & 0.362 & 0.639   & 685 \\
+\textbf{g=7 h=3} & \textbf{0.414} & \textbf{28.075} & \textbf{0.430} & \textbf{0.470}   & \textbf{61} \\
+g=7 h=4 & 0.314 & 29.794 & 0.331 & 0.407   & 22 \\
+\hline
+\end{tabular}
+\end{center}
+These values are calculated with w=8, from other tests we noted a small decrease on the value, but not so relevant.\\
+
+\subsection{Conclusion of Features Extraction approach}
+Observing the results obtained from the experiments based on features extraction approach, we can say that the distances between the features of the objects extracted with Resnet50 are greater than that obtained using Resnet50v2. \\
+Indeed passing an image as a query, the average euclidian distance between it and its k-nearest neighbor using Resnet50 is about 1.2 while using Resnet50v2 is about 25. Moreover the cosine similarity using Resnet50 is about 0.99 while using Resnet50v2 is about 0.5. \vspace{2mm} \\
+It is interesting to note that given a certain value of \textit{g} and varying the value of \textit{h}, the best results are given for h=3, because for greater value the mAP always decrease, while for smaller ones (h=2) in some cases the mAP decrease, in others increase, but we also observe a very significant increase in the number of the items to sort.
+
+
+\clearpage
+
+
+
+
+
+
+% --------------------------------------- FINE TUNUNG ----------------------------------------
+
+\section{Fine Tuning approach}
 During this phase we carried out several tests using different hyperparameters for the fully connected part added at the end both of the networks Resnet50 and Resnet50v2.\\
 We compute this phase adopting a trial and error approach, trying different hyperparameter values for the fully connected neural network appended to the pretrained convolutional one and we compared the performance.\\
 We stopped the training exploiting an \textit{early stopping condition}, monitoring the loss function and setting the patience value equal to 10 and restoring the weights to 10 epochs before.\\
@@ -221,6 +390,8 @@ acc_test : 0.5934579372406006
 \end{verbatim}
 The addition of the dropout did not seem to bring any improvement: on the contrary, the performance of the model is lower. So we tried a new test by removing these dropout levels and adding new FC levels.
 
+
+
 \subsubsection{Model 3}
 In the third trial, we trained the pretrained network Resnet50, adding a fully connected part defined by the following hyperparameter:
 \begin{itemize}
@@ -252,6 +423,8 @@ acc_test : 0.605140209197998
 
 \end{verbatim}
 The network performance remained similar to the previous attempt.
+
+
 
 \subsubsection{Model 4}
 In the fourth trial we trained the pretrained network Resnet50, in order to better generalize the dataset, so we appended a fully connected part defined by the following hyperparameters:
@@ -335,142 +508,232 @@ acc_test : 0.7675233483314514
 The performance did not improve, in fact a slight underfitting appeared.
 
 
-%------------------------- SEQUENTIAL SEARCH -----------------------
-\section{Sequential search}
-During the first information retrieval tests on this Art dataset, we performed a sequential scan and we measured some metrics, in order to have some starting performances to compare them with those calculated when we will introduce the LSH index.\\
-We used the images of the dataset as follow:
-\begin{itemize}
-\item Trainingset and Distractor are combined as data on which to perform the search algorithm
-\item Validationset images are used as queries to perform the search
-\end{itemize}
-The metric used to measure the goodness of the research is \textbf{mean Average Precision} (mAP).
-Given an image \textbf{q} as query we computed the \textbf{average precision} (AP)
-\begin{displaymath}
-AP(q) = \frac{\sum_{k=1}^n Precision(Res_{k}(q))}{n}
-\end{displaymath}
-Where
-
-
-\begin{equation*}
-\text{Res(q) = top k element retrieved using q as query }
-\end{equation*}
-and
-\begin{equation*}
-  Precision(Res_{k}(q)) = \begin{cases}
-    1, & \text{if elem\textsubscript{k} is relevant}.\\
-    0, & \text{otherwise}.
-  \end{cases}
-\end{equation*}
-
-
-\subsubsection{Conclusion}
+\subsubsection{Sequential search after Fine Tuning, using Resnet50}
+During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a fine tuning technique and we computed a sequential scan, obtaining the following results:
 \begin{center}
-\begin{tabular}{|l|ccccc|}
+\begin{tabular}{|l|cc|cc|cc|c|}
 \hline
- & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & \textbf{mAP} cosine & Items\\
+ & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 1 & 0.7617 & 0.7307 &  & & \\
-Model 2 & 0.5935 & 0.9764 &  & & \\
-Model 3 & 0.6051 & 0.9577 &  & & \\
-Model 4 & 0.8072 & 0.6162 &  & & \\
-Model 5 & 0.7675 & 0.6571 &  & & \\
+Model 1 & 0.7617 & 0.7307 &  0.312 & 0.493 & 0.309 & 0.987 &32791\\
+Model 2 & 0.5935 & 0.9764 &  0.329 & 0.885 & 0.328 & 0.975 &32791\\
+Model 3 & 0.6051 & 0.9577 &  0.324 & 1.220 & 0.323 & 0.963 &32791\\
+Model 4 & 0.8072 & 0.6162 &  0.326 & 4.413 & 0.326 & 0.943 &32791\\
+Model 5 & 0.7675 & 0.6571 &  0.313 & 3.679 & 0.320 & 0.953 &32791\\
 \hline
 \end{tabular}
 \end{center}
 
 
-\clearpage
+
+\subsubsection{LSH Index after Fine Tuning, using Resnet50}
+During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a fine tuning technique and we computed a kNN search, obtaining the following results (w=4):
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+  & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
+\hline
+Model 1, g=5 h=3 &  0.314 & 0.574 & 0.318 & 0.982 & 4377\\
+Model 2, g=4 h=2 &  0.328 & 1.048 & 0.330 & 0.967 & 4532\\
+Model 3, g=4 h=2 &  0.326 & 1.375 & 0.333 & 0.952 & 4507\\
+Model 4, g=6 h=3 &  0.316 & 5.647 & 0.328 & 0.912 & 485\\
+Model 5, g=4 h=3 &  0.311 & 4.474 & 0.318 & 0.931 & 570\\
+\hline
+\end{tabular}
+\vspace{1mm}
+\end{center}
+Comparing the performance obtained using different models, we can conclude that computing a sequential scan or using the index, the performance change only in terms of items retrieved.\\
+Moreover we reported only the best results of the indexes: selected a model and varying the hyperparameters \textit{g} and \textit{h} the indexes that retrieve less objects.
+
 \subsection{Resnet50v2}
 For this convolutional base, we performed the tests by resuming the fully connected blocks used in the previous step. We just report the obtained results, since all the hyperparameters can be consulted in the previous section.
 
 \subsubsection{Model 1}
+In this first trial with Resnet50v2, we appended a fully connected part defined by the following hyperparameter:
+\begin{itemize}
+\item Unfreezed layers from conv5\_block1\_preact\_bn
+\item 1 dense layer composed by 256 neurons
+\item Activation function: softmax
+\item Learning rate: 1e-6
+\end{itemize}
 
 \begin{verbatim}
-    precision    recall  f1-score   support
+precision    recall  f1-score   support
 
-         0.0       0.75      0.70      0.72       122
-         1.0       0.90      0.63      0.74        84
-         2.0       0.91      1.00      0.95       231
-         3.0       0.95      0.96      0.96       228
-         4.0       0.93      0.97      0.95       191
+         0.0       0.68      0.65      0.66       122
+         1.0       0.67      0.58      0.62        84
+         2.0       0.96      0.97      0.97       231
+         3.0       0.92      0.96      0.94       228
+         4.0       0.92      0.95      0.94       191
 
-    accuracy                           0.90       856
-   macro avg       0.89      0.85      0.86       856
-weighted avg       0.90      0.90      0.90       856
+    accuracy                           0.88       856
+   macro avg       0.83      0.82      0.83       856
+weighted avg       0.87      0.88      0.88       856
 
-loss_test : 0.779442548751831  
-acc_test : 0.9030373692512512
+loss_test : 0.3915505111217499  
+acc_test : 0.8785046935081482
 \end{verbatim}
 
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/model1_v2_acc.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/model1_v2_loss.png}
+    \end{minipage}
+\end{figure}
+\vspace{3mm}
+
+
 \subsubsection{Model 2}
+In this second trial with Resnet50v2, we appended a fully connected part defined by the following hyperparameter:
+\begin{itemize}
+\item Unfreezed layers from conv5\_block1\_preact\_bn
+\item Dropout layer, rate: 0.5
+\item 1 dense layer composed by 256 neurons
+\item Dropout layer, rate: 0.5
+\item 1 dense layer composed by 128 neurons
+\item Dropout layer, rate: 0.5
+\item Activation function: softmax
+\item Learning rate: 1e-5
+\end{itemize}
 
 \begin{verbatim}
-    precision    recall  f1-score   support
 
-         0.0       0.76      0.53      0.62       122
-         1.0       0.74      0.69      0.72        84
-         2.0       0.90      1.00      0.94       231
+	precision    recall  f1-score   support
+
+         0.0       0.70      0.58      0.63       122
+         1.0       0.76      0.60      0.67        84
+         2.0       0.96      0.99      0.97       231
          3.0       0.90      0.96      0.93       228
-         4.0       0.96      0.98      0.97       191
+         4.0       0.90      0.98      0.94       191
 
-    accuracy                           0.89       856
-   macro avg       0.85      0.83      0.84       856
-weighted avg       0.88      0.89      0.88       856
+    accuracy                           0.88       856
+   macro avg       0.84      0.82      0.83       856
+weighted avg       0.87      0.88      0.88       856
 
-loss_test : 0.5550180077552795  
-acc_test : 0.8855140209197998
+loss_test : 0.35103410482406616  
+acc_test : 0.8820093274116516
+
 \end{verbatim}
 
 \subsubsection{Model 3}
+In the fourth trial we trained the pretrained neural network Resnet50v2, we appended a fully connected part defined by the following hyperparameter:
 
+\begin{itemize}
+\item Unfreezed layers from conv5\_block1\_preact\_bn
+\item Dropout layer, rate: 0.5
+\item 1 dense layer composed by 256 neurons
+\item Dropout layer, rate: 0.5
+\item 1 dense layer composed by 128 neurons
+\item Dropout layer, rate: 0.5
+\item 1 dense layer composed by 64 neurons
+\item Activation function: softmax
+\item Learning rate: 1e-6
+\end{itemize}
 \begin{verbatim}
-    precision    recall  f1-score   support
+precision    recall  f1-score   support
 
-         0.0       0.70      0.72      0.71       122
-         1.0       0.96      0.56      0.71        84
-         2.0       0.91      1.00      0.95       231
-         3.0       0.93      0.96      0.94       228
-         4.0       0.96      0.96      0.96       191
+         0.0       0.90      0.21      0.34       122
+         1.0       0.61      0.83      0.70        84
+         2.0       0.97      0.98      0.98       231
+         3.0       0.83      0.96      0.89       228
+         4.0       0.87      0.97      0.92       191
 
-    accuracy                           0.90       856
-   macro avg       0.89      0.84      0.85       856
-weighted avg       0.90      0.90      0.89       856
+    accuracy                           0.85       856
+   macro avg       0.83      0.79      0.77       856
+weighted avg       0.86      0.85      0.82       856
 
-loss_test : 0.5826641917228699  
-acc_test : 0.8971962332725525
+loss_test : 0.48188671469688416  
+acc_test : 0.8492990732192993
 \end{verbatim}
 
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/ResNetV2_4_acc.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/ResNetV2_4_loss.png}
+    \end{minipage}
+\end{figure}
+\vspace{3mm}
+
+
+
 \subsubsection{Model 4}
+In the last trial, we trained the Resnet50 convolutional base, where we appended the same fully connected part of the previous experiment applying a data augmentation technique, in order to better generalize the dataset.
 
-\subsubsection{Model 5}
+\begin{verbatim}
+	precision    recall  f1-score   support
+
+         0.0       0.78      0.48      0.60       122
+         1.0       0.70      0.73      0.71        84
+         2.0       0.96      0.99      0.98       231
+         3.0       0.90      0.95      0.93       228
+         4.0       0.88      0.99      0.93       191
+
+    accuracy                           0.88       856
+   macro avg       0.84      0.83      0.83       856
+weighted avg       0.88      0.88      0.87       856
+
+loss_test : 0.37721073627471924  
+acc_test : 0.8808411359786987
+
+\end{verbatim}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/ResNetV2_5_acc.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.46]{./img/models/ResNetV2_5_loss.png}
+    \end{minipage}
+\end{figure}
+\vspace{3mm}
 
 
 
+\subsubsection{Sequential search after Fine Tuning Resnet50v2}
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2 after having fine tuned it and we computed a sequential scan, obtaining the following results:
+\begin{center}
+\begin{tabular}{|l|cc|cc|cc|c|}
+\hline
+ & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
+\hline
+Model 3 & 0.8493 & 0.4819 &  0.337 & 16.684 & 0.335 & 0.661 &32791\\
+Model 4 & 0.8808 & 0.3772 &  0.352 & 8.997 & 0.345 & 0.729 & 32791\\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{LSH Index after Fine Tuning Resnet50v2}
+
+\subsection{Conclusion of Fine Tuning approach}
 
 \clearpage
 
 
-% ----------------------------------- SEQUENTIAL SCANNING -----------------------------------
-\section{Sequential Scanning}
-The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity distance:
-\begin{itemize}
-\item Euclidian distance
-\item Cosine similarity
-%\item Hamming distance
-\end{itemize}
-We performed the evaluation of the sequential search function, based on the validation set, so that we could have data on which to compare the performance of the LSH index. 
-The evaluation was done by calculating the mean Average Precision (mAP) metric, using the features extracted from both Resnet50 and Resnet50v2. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.
 
 
-\begin{center}
-\begin{tabular}{|l|cc|cc|c|}
-\hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
-\hline
-Resnet50 & 0.306 & 1.083 & 0.309 & 0.999 & 32791 \\
-Resnet50v2 & 0.351 & 17.977 & 0.343 & 0.747 & 32791 \\
-\hline
-\end{tabular}
-\end{center}
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}
