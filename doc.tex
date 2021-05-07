@@ -216,17 +216,59 @@ np.save(FILE_TRAINING_FEATURES, training_features)
 
 \subsection{Resnet50}
 \subsubsection{Sequential search after Features Extraction, using Resnet50}
-During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a features extraction technique and we computed a sequential scan, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a features extraction technique and we computed a sequential scan \textit{both with and without the distractor}, in order to compare the performance when we introduced some images as noise.\\
+We obtained the following results:\\
+
+Test without distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
 k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
-Resnet50 & 0.306 & 1.083 & 0.309 & 0.999 & 32791 \\
+Resnet50 & 0.715 & 1.085 & 0.718 & 0.999 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+\textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
+\hline
+\textbf{Euclidian mAP} & 0.561 & 0.562 & 0.701 & 0.917 & 0.658 \\
+\hline
+\textbf{Cosine mAP} & 0.550 & 0.580 & 0.707 & 0.913 & 0.669 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{5mm}
+
+
+
+Test introducing distractor
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+Resnet50 & 0.704 & 1.083 & 0.707 & 0.999 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+\textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
+\hline
+\textbf{Euclidian mAP} & 0.549 & 0.554 & 0.690 & 0.914 & 0.639 \\
+\hline
+\textbf{Cosine mAP} & 0.536 & 0.572 & 0.697 & 0.909 & 0.648 \\
 \hline
 \end{tabular}
 \end{center}
 \vspace{2mm}
+From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidian distance and the cosine similarity.
 
 
 \subsubsection{LSH Index after Features Extraction, using Resnet50}
@@ -250,17 +292,61 @@ We tested the LSH index also with different values of \textit{w}, but we conclud
 % ------------
 \subsection{Resnet50v2}
 \subsubsection{Sequential search after Features Extraction, using Resnet50v2}
-During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a features extraction technique and we computed a sequential scan, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a features extraction technique and we computed a sequential scan \textit{both with and without the distractor}, in order to compare the performance when we introduced some images as noise.\\
+We obtained the following results:\\
+
+
+Test without distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
 k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
-Resnet50v2 & 0.351 & 17.977 & 0.343 & 0.747 & 32791 \\
+Resnet50v2 & 0.893 & 17.986 & 0.902 & 0.747 & 32791 \\
 \hline
 \end{tabular}
 \end{center}
-\vspace{2mm}
+
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+\textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
+\hline
+\textbf{Euclidian mAP} & 0.686 & 0.698 & 0.984 & 0.953 & 0.929 \\
+\hline
+\textbf{Cosine mAP} & 0.638 & 0.779 & 0.988 & 0.950 & 0.962 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{4mm}
+
+
+Test introducing distractor
+\begin{center}
+\begin{tabular}{|l|cc|cc|c|}
+\hline
+k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+\hline
+Resnet50v2 & 0.888 & 17.977 & 0.897 & 0.747 & 32791 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+\textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
+\hline
+\textbf{Euclidian mAP} & 0.682 & 0.696 & 0.984 & 0.947 & 0.918 \\
+\hline
+\textbf{Cosine mAP} & 0.636 & 0.772 & 0.988 & 0.946 & 0.953 \\
+\hline
+\end{tabular}
+\end{center}
+\vspace{3mm}
+From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidian distance and the cosine similarity.\\
+Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidian distance between objects is higher than the one computed using Resnet50 (about 1600\%), while the overall performance of the sequential scan search (measured by the mAP) is better, about 16\%.
 
 
 
@@ -515,15 +601,14 @@ During this section we extracted the features from the dataset using the pretrai
 \hline
  & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 1 & 0.7617 & 0.7307 &  0.312 & 0.493 & 0.309 & 0.987 &32791\\
-Model 2 & 0.5935 & 0.9764 &  0.329 & 0.885 & 0.328 & 0.975 &32791\\
-Model 3 & 0.6051 & 0.9577 &  0.324 & 1.220 & 0.323 & 0.963 &32791\\
-Model 4 & 0.8072 & 0.6162 &  0.326 & 4.413 & 0.326 & 0.943 &32791\\
-Model 5 & 0.7675 & 0.6571 &  0.313 & 3.679 & 0.320 & 0.953 &32791\\
+Model 1 & 0.7617 & 0.7307 &  0.761 & 0.493 & 0.765 & 0.987 &32791\\
+Model 2 & 0.5935 & 0.9764 &  0.749 & 0.885 & 0.755 & 0.975 &32791\\
+Model 3 & 0.6051 & 0.9577 &  0.742 & 1.220 & 0.749 & 0.963 &32791\\
+Model 4 & 0.8072 & 0.6162 &  0.767 & 4.413 & 0.780 & 0.943 &32791\\
+Model 5 & 0.7675 & 0.6571 &  0.756 & 3.679 & 0.768 & 0.953 &32791\\
 \hline
 \end{tabular}
 \end{center}
-
 
 
 \subsubsection{LSH Index after Fine Tuning, using Resnet50}
@@ -709,8 +794,8 @@ During this section we extracted the features from the dataset using the pretrai
 \hline
  & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 3 & 0.8493 & 0.4819 &  0.337 & 16.684 & 0.335 & 0.661 &32791\\
-Model 4 & 0.8808 & 0.3772 &  0.352 & 8.997 & 0.345 & 0.729 & 32791\\
+Model 3 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 &32791\\
+Model 4 & 0.8808 & 0.3772 &  0.893 & 8.997 & 0.908 & 0.729 & 32791\\
 \hline
 \end{tabular}
 \end{center}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  3 MAY 2021 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  7 MAY 2021 11:54
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -465,134 +465,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--185
  []
 
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 219--220
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 219--221
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--221
+
  []
 
 [6
 
  <./img/skip_connection.png>]
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 233--234
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 275--276
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 253--254
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 295--297
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
 
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 268--269
-\T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
-aset us-ing the pre-trained net-work Resnet50v2,
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
+
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 354--355
+\T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
+aset us-ing the pre-trained net-work Resnet50v2,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 314--318
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 400--404
 
  []
 
-<./img/models/model1_acc.png, id=58, 373.395pt x 264.99pt>
+<./img/models/model1_acc.png, id=61, 373.395pt x 264.99pt>
 File: ./img/models/model1_acc.png Graphic file (type png)
 <use ./img/models/model1_acc.png>
-Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 351.
+Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 437.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model1_loss.png, id=59, 373.395pt x 264.99pt>
+<./img/models/model1_loss.png, id=62, 373.395pt x 264.99pt>
 File: ./img/models/model1_loss.png Graphic file (type png)
 <use ./img/models/model1_loss.png>
-Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 355.
+Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 441.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-[9
+[10
 
- <./img/models/model1_acc.png> <./img/models/model1_loss.png>] [10] [11]
-<./img/models/model4_acc.png, id=71, 373.395pt x 264.99pt>
+ <./img/models/model1_acc.png> <./img/models/model1_loss.png>] [11] [12]
+<./img/models/model4_acc.png, id=75, 373.395pt x 264.99pt>
 File: ./img/models/model4_acc.png Graphic file (type png)
 <use ./img/models/model4_acc.png>
-Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 465.
+Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 551.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model4_loss.png, id=72, 373.395pt x 264.99pt>
+<./img/models/model4_loss.png, id=76, 373.395pt x 264.99pt>
 File: ./img/models/model4_loss.png Graphic file (type png)
 <use ./img/models/model4_loss.png>
-Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 469.
+Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 555.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model5_acc.png, id=73, 373.395pt x 264.99pt>
+<./img/models/model5_acc.png, id=77, 373.395pt x 264.99pt>
 File: ./img/models/model5_acc.png Graphic file (type png)
 <use ./img/models/model5_acc.png>
-Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 500.
+Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 586.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model5_loss.png, id=74, 373.395pt x 264.99pt>
+<./img/models/model5_loss.png, id=78, 373.395pt x 264.99pt>
 File: ./img/models/model5_loss.png Graphic file (type png)
 <use ./img/models/model5_loss.png>
-Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 504.
+Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 590.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
-[12 <./img/models/model4_acc.png> <./img/models/model4_loss.png>]
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 512--513
+[13 <./img/models/model4_acc.png> <./img/models/model4_loss.png>]
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 598--599
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 530--531
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 615--616
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
-[13 <./img/models/model5_acc.png> <./img/models/model5_loss.png>]
-<./img/models/model1_v2_acc.png, id=86, 373.395pt x 264.99pt>
+[14 <./img/models/model5_acc.png> <./img/models/model5_loss.png>]
+<./img/models/model1_v2_acc.png, id=89, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_acc.png Graphic file (type png)
 <use ./img/models/model1_v2_acc.png>
-Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 581
+Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 666
 .
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model1_v2_loss.png, id=87, 373.395pt x 264.99pt>
+<./img/models/model1_v2_loss.png, id=90, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_loss.png Graphic file (type png)
 <use ./img/models/model1_v2_loss.png>
-Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 58
-5.
+Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 67
+0.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
- [14 <./img/models/model1_v2_acc.png> <./img/models/model1_v2_loss.png>]
-<./img/models/ResNetV2_4_acc.png, id=93, 373.395pt x 264.99pt>
+ [15 <./img/models/model1_v2_acc.png> <./img/models/model1_v2_loss.png>]
+<./img/models/ResNetV2_4_acc.png, id=96, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_4_acc.png Graphic file (type png)
 <use ./img/models/ResNetV2_4_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 65
-8.
+Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 74
+3.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_4_loss.png, id=94, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_4_loss.png, id=97, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_4_loss.png Graphic file (type png)
 <use ./img/models/ResNetV2_4_loss.png>
-Package pdftex.def Info: ./img/models/ResNetV2_4_loss.png  used on input line 6
-62.
+Package pdftex.def Info: ./img/models/ResNetV2_4_loss.png  used on input line 7
+47.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
- [15]
-<./img/models/ResNetV2_5_acc.png, id=98, 373.395pt x 264.99pt>
+ [16]
+<./img/models/ResNetV2_5_acc.png, id=101, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_5_acc.png Graphic file (type png)
 <use ./img/models/ResNetV2_5_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 69
-4.
+Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 77
+9.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_5_loss.png, id=99, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_5_loss.png, id=102, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_5_loss.png Graphic file (type png)
 <use ./img/models/ResNetV2_5_loss.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 6
-98.
+Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 7
+83.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
-Overfull \hbox (10.00842pt too wide) in paragraph at lines 706--707
+Overfull \hbox (10.00842pt too wide) in paragraph at lines 791--792
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2
  []
 
-[16 <./img/models/ResNetV2_4_acc.png> <./img/models/ResNetV2_4_loss.png> <./img
-/models/ResNetV2_5_acc.png> <./img/models/ResNetV2_5_loss.png>] [17] (doc.aux)
+[17 <./img/models/ResNetV2_4_acc.png> <./img/models/ResNetV2_4_loss.png> <./img
+/models/ResNetV2_5_acc.png> <./img/models/ResNetV2_5_loss.png>] [18] (doc.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -600,7 +610,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  6756 strings out of 479618
  107176 string characters out of 2865026
- 436238 words of memory out of 3000000
+ 441238 words of memory out of 3000000
  23809 multiletter control sequences out of 15000+200000
  417575 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -624,9 +634,9 @@ s/cm/cmmi8.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmr10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmr8.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fon
 ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (18 pages, 552986 bytes).
+Output written on doc.pdf (19 pages, 556506 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
+ 479 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
