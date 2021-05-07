@@ -66,13 +66,14 @@ for filename in os.listdir(VALIDATION_DATA):
       print("ERROR" + VALIDATION_DATA + filename)
       os.remove(VALIDATION_DATA + filename)
 \end{verbatim}
-The following figures show the distribution of the classes of the trainig set, after the execution of the snippet of code shown above :\\
+The final training set is composed by a total of 7786 images, while the validation set has a total of 856 images. \\ 
+The following figures show the distribution of the classes of the training set, after the execution of the snippet of code shown above :\\
 
 \begin{figure}[h]
 \centering
 	\begin{minipage}[c]{.45\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
-		\includegraphics[width=1.\textwidth]{./img/train_hinstogram.png}
+		\includegraphics[width=1.\textwidth]{./img/train_histogram.png}
 		\label{fig:}
 	\end{minipage}
 	\hspace{5mm}%
@@ -84,13 +85,13 @@ The following figures show the distribution of the classes of the trainig set, a
 \end{figure}
 
 \vspace{10mm}
-The following figures show the distribution of the classes of the validationset, after the execution of the snippet of code shown above :\\
+The following figures show the distribution of the classes of the validation set, after the execution of the snippet of code shown above :\\
 
 \begin{figure}[h]
 \centering
 	\begin{minipage}[c]{.46\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
-		\includegraphics[width=1.\textwidth]{./img/val_hinstogram.png}
+		\includegraphics[width=1.\textwidth]{./img/val_histogram.png}
 		\label{fig:}
 	\end{minipage}
 	\hspace{5mm}%
@@ -107,20 +108,20 @@ The following figures show the distribution of the classes of the validationset,
 
 %------------------------- SEQUENTIAL SEARCH -----------------------
 \section{Sequential search}
-The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity distance:
+The first implementation of our image search engine is based on a numpy array as data structure and a sequential scanning as search algorithm, using the following similarity measures:
 
 \begin{itemize}
-\item Euclidian distance
+\item Euclidean distance
 \item Cosine similarity
 \end{itemize}
 
-We performed the evaluation of the sequential search function, based on the validation set, so that we could have some starting data to compare with respect to the performance of the LSH index. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.\\
+We performed the evaluation of the sequential search function, using the validation set, so that we could have some starting data to compare with the performance of the LSH index. We compared the queries to the dataset (training set + distractor), first using the cosine similarity and then the Euclidean distance.\\
 We used the images of the dataset as follow:
 \begin{itemize}
-\item Trainingset and Distractor are combined as data on which to perform the search algorithm
-\item Validationset images are used as queries to perform the search
+\item Training set and Distractor are combined as data on which to perform the search algorithm
+\item Validation set images are used as queries to perform the search
 \end{itemize}
-The metric used to measure the goodness of the research is \textbf{mean Average Precision} (mAP).
+The metric used to measure the goodness of the research is the \textbf{mean Average Precision} (mAP).
 Given an image \textbf{q} as query we computed the \textbf{average precision} (AP)\\
 \vspace{2mm}
 \begin{displaymath}
@@ -167,7 +168,7 @@ When a query is passed to the search engine, its features are hashed using each 
 \section{Features extraction}
 
 During this phase we extracted the features from the images and we stored them in order to reload them as numpy-array when it is necessary.\\
-The pretrained convolutional neural networks used are:
+The pretrained convolutional neural networks we used are:
 \begin{itemize}
 \item ResNet50
 \item ResNet50v2
@@ -223,9 +224,9 @@ Test without distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
-Resnet50 & 0.715 & 1.085 & 0.718 & 0.999 & 32791 \\
+Resnet50 & 0.715 & 1.085 & 0.718 & 0.999 & 7784 \\
 \hline
 \end{tabular}
 \end{center}
@@ -235,7 +236,7 @@ Resnet50 & 0.715 & 1.085 & 0.718 & 0.999 & 32791 \\
 \hline
 \textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
 \hline
-\textbf{Euclidian mAP} & 0.561 & 0.562 & 0.701 & 0.917 & 0.658 \\
+\textbf{Euclidean mAP} & 0.561 & 0.562 & 0.701 & 0.917 & 0.658 \\
 \hline
 \textbf{Cosine mAP} & 0.550 & 0.580 & 0.707 & 0.913 & 0.669 \\
 \hline
@@ -249,7 +250,7 @@ Test introducing distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
 Resnet50 & 0.704 & 1.083 & 0.707 & 0.999 & 32791 \\
 \hline
@@ -261,14 +262,14 @@ Resnet50 & 0.704 & 1.083 & 0.707 & 0.999 & 32791 \\
 \hline
 \textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
 \hline
-\textbf{Euclidian mAP} & 0.549 & 0.554 & 0.690 & 0.914 & 0.639 \\
+\textbf{Euclidean mAP} & 0.549 & 0.554 & 0.690 & 0.914 & 0.639 \\
 \hline
 \textbf{Cosine mAP} & 0.536 & 0.572 & 0.697 & 0.909 & 0.648 \\
 \hline
 \end{tabular}
 \end{center}
 \vspace{2mm}
-From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidian distance and the cosine similarity.
+From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity.
 
 
 \subsubsection{LSH Index after Features Extraction, using Resnet50}
@@ -276,7 +277,7 @@ During this section we extracted the features from the dataset using the pretrai
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
 \textbf{g=5 h=2} & \textbf{0.309} & \textbf{1.216} & \textbf{0.318} & \textbf{0.999}  & \textbf{5701 }\\
 g=6 h=2 & 0.303 & 1.227 & 0.308 & 0.999  & 4836 \\
@@ -300,9 +301,9 @@ Test without distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
-Resnet50v2 & 0.893 & 17.986 & 0.902 & 0.747 & 32791 \\
+Resnet50v2 & 0.893 & 17.986 & 0.902 & 0.747 & 7784 \\
 \hline
 \end{tabular}
 \end{center}
@@ -312,7 +313,7 @@ Resnet50v2 & 0.893 & 17.986 & 0.902 & 0.747 & 32791 \\
 \hline
 \textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
 \hline
-\textbf{Euclidian mAP} & 0.686 & 0.698 & 0.984 & 0.953 & 0.929 \\
+\textbf{Euclidean mAP} & 0.686 & 0.698 & 0.984 & 0.953 & 0.929 \\
 \hline
 \textbf{Cosine mAP} & 0.638 & 0.779 & 0.988 & 0.950 & 0.962 \\
 \hline
@@ -325,7 +326,7 @@ Test introducing distractor
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
 Resnet50v2 & 0.888 & 17.977 & 0.897 & 0.747 & 32791 \\
 \hline
@@ -338,15 +339,15 @@ Resnet50v2 & 0.888 & 17.977 & 0.897 & 0.747 & 32791 \\
 \hline
 \textbf{Class} &  0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture\\
 \hline
-\textbf{Euclidian mAP} & 0.682 & 0.696 & 0.984 & 0.947 & 0.918 \\
+\textbf{Euclidean mAP} & 0.682 & 0.696 & 0.984 & 0.947 & 0.918 \\
 \hline
 \textbf{Cosine mAP} & 0.636 & 0.772 & 0.988 & 0.946 & 0.953 \\
 \hline
 \end{tabular}
 \end{center}
 \vspace{3mm}
-From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidian distance and the cosine similarity.\\
-Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidian distance between objects is higher than the one computed using Resnet50 (about 1600\%), while the overall performance of the sequential scan search (measured by the mAP) is better, about 16\%.
+From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity.\\
+Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidean distance between objects is higher than the one computed using Resnet50 (about 1600\%), while the overall performance of the sequential scan search (measured by the mAP) is better, about 16\%.
 
 
 
@@ -355,7 +356,7 @@ During this section we extracted the features from the dataset using the pretrai
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-k = 10 &  mAP euclidian & avg dist & mAP cosine & avg sim & $\#$Items\\
+k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
 g=3 h=2 & 0.369 & 22.772 & 0.375 & 0.619   & 477 \\
 \textbf{g=3 h=3} & \textbf{0.415} & \textbf{27.532} & \textbf{0.412} & \textbf{0.490}  & \textbf{79} \\
@@ -383,9 +384,24 @@ These values are calculated with w=8, from other tests we noted a small decrease
 
 \subsection{Conclusion of Features Extraction approach}
 Observing the results obtained from the experiments based on features extraction approach, we can say that the distances between the features of the objects extracted with Resnet50 are greater than that obtained using Resnet50v2. \\
-Indeed passing an image as a query, the average euclidian distance between it and its k-nearest neighbor using Resnet50 is about 1.2 while using Resnet50v2 is about 25. Moreover the cosine similarity using Resnet50 is about 0.99 while using Resnet50v2 is about 0.5. \vspace{2mm} \\
+Indeed passing an image as a query, the average euclidean distance between it and its k-nearest neighbor using Resnet50 is about 1.2 while using Resnet50v2 is about 25. Moreover the cosine similarity using Resnet50 is about 0.99 while using Resnet50v2 is about 0.5. \vspace{2mm} \\
 It is interesting to note that given a certain value of \textit{g} and varying the value of \textit{h}, the best results are given for h=3, because for greater value the mAP always decrease, while for smaller ones (h=2) in some cases the mAP decrease, in others increase, but we also observe a very significant increase in the number of the items to sort.
 
+
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.46\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/sequential_hist}
+		\label{fig:}
+	\end{minipage}
+	\hspace{5mm}%
+	\begin{minipage}[c]{.46\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/sequential_hist}
+		\label{fig:scratch_matrix}
+	\end{minipage}%
+\end{figure}
 
 \clearpage
 
@@ -599,7 +615,7 @@ During this section we extracted the features from the dataset using the pretrai
 \begin{center}
 \begin{tabular}{|l|cc|cc|cc|c|}
 \hline
- & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
+ & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
 Model 1 & 0.7617 & 0.7307 &  0.761 & 0.493 & 0.765 & 0.987 &32791\\
 Model 2 & 0.5935 & 0.9764 &  0.749 & 0.885 & 0.755 & 0.975 &32791\\
@@ -616,7 +632,7 @@ During this section we extracted the features from the dataset using the pretrai
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
-  & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
+  & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
 Model 1, g=5 h=3 &  0.314 & 0.574 & 0.318 & 0.982 & 4377\\
 Model 2, g=4 h=2 &  0.328 & 1.048 & 0.330 & 0.967 & 4532\\
@@ -792,7 +808,7 @@ During this section we extracted the features from the dataset using the pretrai
 \begin{center}
 \begin{tabular}{|l|cc|cc|cc|c|}
 \hline
- & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidian & avg dist & \textbf{mAP} cosine & avg sim & Items\\
+ & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
 Model 3 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 &32791\\
 Model 4 & 0.8808 & 0.3772 &  0.893 & 8.997 & 0.908 & 0.729 & 32791\\
