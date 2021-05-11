@@ -269,11 +269,12 @@ Resnet50 & 0.704 & 1.083 & 0.707 & 0.999 & 32791 \\
 \end{tabular}
 \end{center}
 \vspace{2mm}
-From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity.
+From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity. \\
+Note that the last column of the tables (\textit{$\#$Items}) gives the number of objects visited by each query.
 
 
 \subsubsection{LSH Index after Features Extraction, using Resnet50}
-During this section we extracted the features from the dataset using the pretrained network Resnet50, adopting a fine tuning technique and we computed a kNN search setting w=4, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50 adopting a fine tuning technique and we computed a kNN search setting w=4, obtaining the following results:
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
@@ -348,7 +349,7 @@ Resnet50v2 & 0.888 & 17.977 & 0.897 & 0.747 & 32791 \\
 \end{center}
 \vspace{3mm}
 From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity.\\
-Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidean distance between objects is higher than the one computed using Resnet50 (about 1600\%), while the overall performance of the sequential scan search (measured by the mAP) is better, about 16\%.
+Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidean distance between objects is higher than the one computed using Resnet50 (about 17 times more), while the overall performance of the sequential scan search (measured by the mAP) is better, by about 18\%.
 
 
 
@@ -359,55 +360,82 @@ During this section we extracted the features from the dataset using the pretrai
 \hline
 k = 10 &  mAP euclidean & avg dist & mAP cosine & avg sim & $\#$Items\\
 \hline
-\textbf{g=3 h=2} & \textbf{0.772} & \textbf{22.772} & \textbf{0.801} & \textbf{0.619}  & \textbf{855} \\
-g=3 h=3 & 0.631 & 27.532 & 0.663 & 0.490   & 849 \\
-g=3 h=4 & 0.357 & 29.709 & 0.404 & 0.409   & 711 \\ 
+\textbf{g=3 h=2} & \textbf{0.772} & \textbf{22.772} & \textbf{0.801} & \textbf{0.619}  & \textbf{477} \\
+g=3 h=3 & 0.631 & 27.532 & 0.663 & 0.490   & 79 \\
+g=3 h=4 & 0.357 & 29.709 & 0.404 & 0.409   & 25 \\ 
 \hline
-\textbf{g=4 h=2} & \textbf{0.793} & \textbf{22.285} & \textbf{0.814} & \textbf{0.634}  & \textbf{856} \\
-g=4 h=3 & 0.608 & 27.865 & 0.651 & 0.474   & 843 \\
-g=4 h=4 & 0.414 & 29.658 & 0.446 & 0.411   & 736 \\
+\textbf{g=4 h=2} & \textbf{0.793} & \textbf{22.285} & \textbf{0.814} & \textbf{0.634}  & \textbf{430} \\
+g=4 h=3 & 0.608 & 27.865 & 0.651 & 0.474   & 71 \\
+g=4 h=4 & 0.414 & 29.658 & 0.446 & 0.411   & 27 \\
 \hline
-\textbf{g=5 h=2} & \textbf{0.780} & \textbf{22.456} & \textbf{0.807} & \textbf{0.627}  & \textbf{855} \\
-g=5 h=3 & 0.691 & 26.175 & 0.728 & 0.527   & 843 \\
-g=5 h=4 & 0.486 & 28.903 & 0.509 & 0.432   & 741 \\
+\textbf{g=5 h=2} & \textbf{0.780} & \textbf{22.456} & \textbf{0.807} & \textbf{0.627}  & \textbf{464} \\
+g=5 h=3 & 0.691 & 26.175 & 0.728 & 0.527   & 121 \\
+g=5 h=4 & 0.486 & 28.903 & 0.509 & 0.432   & 23 \\
 \hline
-\textbf{g=6 h=2} & \textbf{0.794} & \textbf{21.995} & \textbf{0.822} & \textbf{0.639}  & \textbf{855} \\
-g=6 h=3 & 0.677 & 26.748 & 0.705 & 0.513   & 843 \\
-g=6 h=4 & 0.524 & 27.908 & 0.545 & 0.457   & 736 \\
+\textbf{g=6 h=2} & \textbf{0.794} & \textbf{21.995} & \textbf{0.822} & \textbf{0.639}  & \textbf{568} \\
+g=6 h=3 & 0.677 & 26.748 & 0.705 & 0.513   & 88 \\
+g=6 h=4 & 0.524 & 27.908 & 0.545 & 0.457   & 23 \\
 \hline
-\textbf{g=7 h=2} & \textbf{0.795} & \textbf{22.128} & \textbf{0.820} & \textbf{0.639}   & \textbf{854} \\
-g=7 h=3 & 0.584 & 28.075 & 0.629 & 0.470   & 835 \\
-g=7 h=4 & 0.304 & 29.794 & 0.323 & 0.407   & 696 \\
+\textbf{g=7 h=2} & \textbf{0.795} & \textbf{22.128} & \textbf{0.820} & \textbf{0.639}   & \textbf{685} \\
+g=7 h=3 & 0.584 & 28.075 & 0.629 & 0.470   & 61 \\
+g=7 h=4 & 0.304 & 29.794 & 0.323 & 0.407   & 22 \\
 \hline
-\textbf{g=8 h=2} & \textbf{0.789} & \textbf{22.137} & \textbf{0.818} & \textbf{0.635}   & \textbf{856} \\
-g=8 h=3 & 0.566 & 27.591 & 0.615 & 0.483   & 835 \\
-g=8 h=4 & 0.380 & 29.613 & 0.405 & 0.414   & 717 \\
+\textbf{g=8 h=2} & \textbf{0.789} & \textbf{22.137} & \textbf{0.818} & \textbf{0.635}   & \textbf{450} \\
+g=8 h=3 & 0.566 & 27.591 & 0.615 & 0.483   & 74 \\
+g=8 h=4 & 0.380 & 29.613 & 0.405 & 0.414   & 27 \\
 \hline
 \end{tabular}
 \vspace{2mm}
 \end{center}
-We performed different tests varying the value of \textit{w}; in the previous table the values shown are calculated with w=8, indeed from other tests we noted a small decrease on the value of mAP, but not so relevant, so we reported only the best ones.\\
+We performed different tests varying the value of \textit{w}; in the previous table the values shown are calculated with \textbf{w=8}, indeed from other tests we noted a small decrease on the value of mAP, but not so relevant, so we reported only the best ones.\\
 
-\subsection{Conclusion of Features Extraction approach}
-Observing the results obtained from the experiments based on features extraction approach, we can say that the distances between the features of the objects extracted with Resnet50 are greater than that obtained using Resnet50v2. \\
-Indeed passing an image as a query, the average euclidean distance between it and its k-nearest neighbor using Resnet50 is about 1.2 while using Resnet50v2 is about 25. Moreover the cosine similarity using Resnet50 is about 0.99 while using Resnet50v2 is about 0.5. \vspace{2mm} \\
-It is interesting to note that given a certain value of \textit{g} and varying the value of \textit{h}, the best results are given for h=3, because for greater value the mAP always decrease, while for smaller ones (h=2) in some cases the mAP decrease, in others increase, but we also observe a very significant increase in the number of the items to sort.
-
+\subsection{Conclusion of the Features Extraction approach}
+Observing the results obtained from the experiments based on features extraction approach, we can say that the distances between the features of the objects extracted with Resnet50v2 are greater than that obtained using Resnet50. \\
+Indeed passing an image as a query, the average euclidean distance between it and its k-nearest neighbor using Resnet50 is about $1.2$ while using Resnet50v2 is about $25$. Moreover the cosine similarity using Resnet50 is about $0.99$ while using Resnet50v2 is about $0.5$. \vspace{2mm} \\
+%TODO: non mi torna questo discorso sotto %%
+%It is interesting to note that given a certain value of \textit{g} and varying the value of \textit{h}, the best results are given for h=3, because for greater value the mAP always decreases, while for smaller ones (h=2) in some cases the mAP decreases, in others increases, but we also observe a very significant increase in the number of the items to sort.\vspace{2mm} \\
 
 \begin{figure}[h]
 \centering
-	\begin{minipage}[c]{.46\textwidth}
+	\begin{minipage}[c]{.65\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
 		\includegraphics[width=1.\textwidth]{./img/sequential_hist}
 		\label{fig:}
 	\end{minipage}
-	\hspace{5mm}%
-	\begin{minipage}[c]{.46\textwidth}
-		\centering\setlength{\captionmargin}{0pt}%
-		\includegraphics[width=1.\textwidth]{./img/sequential_hist}
-		\label{fig:scratch_matrix}
-	\end{minipage}%
 \end{figure}
+
+We can see from the figure above that the difference between the Euclidean distance and the Cosine similarity in the search is minimal. In addition, while having features with a larger scale, the Resnet50v2 network has better performace than the Resnet50. \vspace{5mm} \\
+In order to better compare the results obtained so far, we reported some other histograms. \\
+The data included are both from the sequential search and the LSH index search. For the latter, the hyper-parameters taken for the comparison are:
+\begin{itemize}
+\item Resnet50: $g=8, h=2, w=4$
+\item Resnet50v2: $g=7, h=2, w=8$
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FE_visitedObj}
+		\label{fig:}
+	\end{minipage}
+	%\hspace{5mm}%
+	\begin{minipage}[c]{.54\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FE_map}
+		\label{fig:}
+	%\end{minipage}%
+	%\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FE_cosine}
+		\label{fig:}
+	\end{minipage}%
+	\caption{Data comparision for the Feature Extraction approach}
+\end{figure}
+
+If we look at the sequential search performance, Resnet50v2 gets worse by 8\% while Resnet50 only worsens by 2\%. However, we can see that Resnet50v2 has a better mAP even with the index, with 82\% compared to 69\% of Resnet50. We also have to point out that the average number of objects visited per query by Resnet50v2 is 8 times lower than Resnet50, and this might be the reason why there is so much difference in the mAP from sequential to LSH of the first mentioned network. \\
+In the next approach, fine tuning, we will see that this phenomenon will be buffered. 
+
 
 \clearpage
 
@@ -658,30 +686,32 @@ Model 5, g=5 h=2 &  0.707 & 4.011 & 0.728 & 0.944 & 2397\\
 
 Comparing the performance obtained using different models, we can conclude that computing a sequential scan or using the index, the performance change basically only in terms of items retrieved.\\
 Moreover we reported only the best results of the indexes: selected a model and varying the hyperparameters \textit{g} and \textit{h} the indexes that retrieve less objects.\\
-Finally we chose the Model 4 with the following hyperparameters g=5, h=2, w=4 because it visits less objects per query with respect to the others, while maintaining a good value of mAP.
+Finally we chose the Model 4 with the following hyperparameters g=5, h=2, w=4 because it visits less objects per query with respect to the others, while maintaining a good value of mAP. \vspace{5mm} \\
+Below there are some histograms summarizing the results obtained with the Resnet50 network. The index data are associated to the hyper-parameters  that gave the best performance in both the Feature Extraction ($g=8, h=2, w=4$) and Fine Tuning ($g=5, h=2, w=4$) approaches. Moreover, for the latter approach we refer to the Model 4 results. \\
+After the re-training of the last blocks of the network on our training set, we can see that the mAP has increased to 78\% in the sequential search, and to 73\% in the indexed search. Not only do we have an increase in the mAP, but there is also a large decrease in the average number of objects visited per query, from 5304 to 1452. \\
+Both of these considerations lead us to conclude that this approach achieved the best index search with the Resnet50 network.
 
-\begin{figure}[H]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \includegraphics[scale=0.83]{./img/resnet50_cosine.png}
-    \end{minipage}
-\vspace{2mm}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[scale=0.62]{./img/resnet50_visitedObj.png}
-    \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
-        \centering
-        \includegraphics[scale=0.62]{./img/resnet50_map.png}
-    \end{minipage}
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.4\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50_visitedObj}
+		\label{fig:}
+	\end{minipage}
+	%\hspace{5mm}%
+	\begin{minipage}[c]{.57\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50_map}
+		\label{fig:}
+	%\end{minipage}%
+	%\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50_cosine}
+		\label{fig:}
+	\end{minipage}%
+	\caption{Final data comparision for the Resnet50 network}
 \end{figure}
 \vspace{3mm}
-
 
 
 % ------------ resnet50v2 fine tuning
@@ -849,32 +879,20 @@ During this section we extracted the features from the dataset using the pretrai
 \hline
  & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 3 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 &32791\\
-Model 4 & 0.8808 & 0.3772 &  0.893 & 8.997 & 0.908 & 0.729 & 32791\\
+Model 4 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 & 32791\\
+\textbf{Model 5} & \textbf{0.8808} & \textbf{0.3772} &  \textbf{0.893} &  \textbf{8.997} & \textbf{0.908} & \textbf{0.729} & \textbf{32791}\\
 \hline
 \end{tabular}
 \end{center}
 
 \subsubsection{LSH Index after Fine Tuning Resnet50v2}
-During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a fine tuning technique and we computed a kNN search, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a fine tuning technique and we computed a kNN search, obtaining the results in the table below. \vspace{5mm} \\
+We finally chose the Model 5 with the hyperparameters $g=7, h=2, w=6$ because it has the higher value of mAP and it still visits a low number of objects.
 
 \begin{center}
 \begin{tabular}{|l|l|cc|cc|c|}
 \hline
-  Model & Hyperparameters & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
-\hline
-Model 5 & g=4 h=2 w=5 &  0.790 & 11.181 & 0.840 & 0.611 & 724\\
-Model 5 & g=4 h=2 w=6 &  0.793 & 11.661 & 0.840 & 0.596 & 727\\
-\hline
-Model 5 & g=5 h=2 w=5 &  0.808 & 11.147 & 0.848 & 0.607 & 1061\\
-Model 5 & g=5 h=2 w=6 &  0.823 & 10.958 & 0.865 & 0.625 & 1534\\
-\hline
-Model 5 & g=6 h=2 w=5 &  0.797 & 10.887 & 0.847 & 0.616 & 704\\
-Model 5 & g=6 h=2 w=6 &  0.777 & 10.958 & 0.838 & 0.616 & 1012\\
-\hline
-Model 5 & g=7 h=2 w=5 &  0.814 & 11.293 & 0.863 & 0.606 & 1007\\
-\textbf{Model 5} & \textbf{g=7 h=2 w=6} &  \textbf{0.829} & \textbf{11.002} & \textbf{0.861} & \textbf{0.623} & \textbf{1440} \\
-\hline
+   & Hyperparameters & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
 Model 4 & g=4 h=2 w=5 &  0.725 & 22.231 & 0.793 & 0.478 & 266\\
 Model 4 & g=4 h=2 w=6 &  0.764 & 22.038 & 0.824 & 0.516 & 407\\
@@ -888,13 +906,85 @@ Model 4 & g=6 h=2 w=6 &  0.752 & 20.978 & 0.819 & 0.511 & 369\\
 Model 4 & g=7 h=2 w=5 &  0.721 & 21.851 & 0.799 & 0.488 & 345\\
 \textbf{Model 4} & \textbf{g=7 h=2 w=6} &  \textbf{0.761} & \textbf{20.861} & \textbf{0.830} & \textbf{0.519} & \textbf{532} \\
 \hline
-
+\hline
+Model 5 & g=4 h=2 w=5 &  0.790 & 11.181 & 0.840 & 0.611 & 724\\
+Model 5 & g=4 h=2 w=6 &  0.793 & 11.661 & 0.840 & 0.596 & 727\\
+\hline
+Model 5 & g=5 h=2 w=5 &  0.808 & 11.147 & 0.848 & 0.607 & 1061\\
+Model 5 & g=5 h=2 w=6 &  0.823 & 10.958 & 0.865 & 0.625 & 1534\\
+\hline
+Model 5 & g=6 h=2 w=5 &  0.797 & 10.887 & 0.847 & 0.616 & 704\\
+Model 5 & g=6 h=2 w=6 &  0.777 & 10.958 & 0.838 & 0.616 & 1012\\
+\hline
+Model 5 & g=7 h=2 w=5 &  0.814 & 11.293 & 0.863 & 0.606 & 1007\\
+\textbf{Model 5} & \textbf{g=7 h=2 w=6} &  \textbf{0.829} & \textbf{11.002} & \textbf{0.861} & \textbf{0.623} & \textbf{1440} \\
+\hline
 \end{tabular}
 \vspace{1mm}
 \end{center}
 
+\vspace{5mm} 
+Below there are some histograms summarizing the results obtained with the Resnet50v2 network. The index data are associated to the hyper-parameters  that gave the best performance in both the Feature Extraction ($g=7, h=2, w=8$) and Fine Tuning ($g=7, h=2, w=6$) approaches. Moreover, for the latter approach we refer to the Model 5 results.\vspace{3mm} \\
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.43\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50v2_visitedObj}
+		\label{fig:}
+	\end{minipage}
+	%\hspace{5mm}%
+	\begin{minipage}[c]{.56\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50v2_map}
+		\label{fig:}
+	%\end{minipage}%
+	%\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/resnet50v2_cosine}
+		\label{fig:}
+	\end{minipage}%
+	\caption{Final data comparision for the Resnet50v2 network}
+\end{figure}
+
+
+In this case, the partial re-training of the network brought the mAP to 86\% using the index, whereas before it was 82\%. This value of mAP is the highest obtained so far with LSH index search. The number of visited objects is raised compared to the feature extraction data, from 685 to 1440, still remaining lower than the Resnet50 data. This is given by the fact that in the first approach we selected $w=8$ in the index creation, while in the second approach $w=6$ was enough to obtain a high average similarity and a high mAP.
+
+\vspace{3mm}
+
+
 
 \subsection{Conclusion of Fine Tuning approach}
+In order to better compare the obtained results, we reported some other histograms. \\
+The data included are both from the sequential search and the LSH index search. For the latter, the hyper-parameters taken for the comparison are:
+\begin{itemize}
+\item Resnet50 (model 4): $g=5, h=2, w=4$
+\item Resnet50v2 (model 5): $g=7, h=2, w=6$
+\end{itemize}
+
+\begin{figure}[h]
+\centering
+	\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FT_visitedObj}
+		\label{fig:}
+	\end{minipage}
+	%\hspace{5mm}%
+	\begin{minipage}[c]{.54\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FT_map}
+		\label{fig:}
+	%\end{minipage}%
+	%\begin{minipage}[c]{.45\textwidth}
+		\centering\setlength{\captionmargin}{0pt}%
+		\includegraphics[width=1.\textwidth]{./img/FT_cosine}
+		\label{fig:}
+	\end{minipage}%
+	\caption{Data comparision for the Fine Tuning approach}
+\end{figure}
+
+
+\clearpage
+
 
 \section{LSH index considerations}
 During this part of the project we analyzed space of the hyperparameter values after running different tests in the previous sections.\\
