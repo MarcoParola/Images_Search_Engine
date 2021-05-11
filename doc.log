@@ -1,353 +1,319 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  7 MAY 2021 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2021.1.18)  10 MAY 2021 12:52
 entering extended mode
 **./doc.tex
 (doc.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-05-15>
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo"
-File: size11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\size11.clo
+File: size11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@part=\count177
+\c@section=\count178
+\c@subsection=\count179
+\c@subsubsection=\count180
+\c@paragraph=\count181
+\c@subparagraph=\count182
+\c@figure=\count183
+\c@table=\count184
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
+\bibindent=\dimen138
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
-y"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifvtex.sty
-"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- ("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty
-"
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count175
-\Gm@cntv=\count176
-\c@Gm@tempcnt=\count177
-\Gm@bindingoffset=\dimen135
-\Gm@wd@mp=\dimen136
-\Gm@odd@mp=\dimen137
-\Gm@even@mp=\dimen138
-\Gm@layoutwidth=\dimen139
-\Gm@layoutheight=\dimen140
-\Gm@layouthoffset=\dimen141
-\Gm@layoutvoffset=\dimen142
+\Gm@cnth=\count185
+\Gm@cntv=\count186
+\c@Gm@tempcnt=\count187
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
 \Gm@dimlist=\toks16
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-cfg"))
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty"
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
-) ("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
-y"
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
-Package: babel 2020/05/13 3.44 The Babel package
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
-File: babel.def 2020/05/13 3.44 Babel common definitions
-\babel@savecnt=\count178
-\U@D=\dimen143
-\l@babelnohyphens=\language78
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2020/12/16 3.52 The Babel package
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
-ef")
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2020/12/16 3.52 Babel common definitions
+\babel@savecnt=\count188
+\U@D=\dimen147
+\l@babelnohyphens=\language79
+
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count179
+\bbl@dirlevel=\count189
 
 *************************************
 * Local config file bblopts.cfg used
 *
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.cfg"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\engl
-ish.ldf"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.l
+df
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
 Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language72) on input line 105.
+(babel)             (\language73) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language72) on input line 108.
+(babel)             (\language73) on input line 108.
 ))
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/frontespizio\front
-espizio.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/frontespizio\frontespiz
+io.sty
 Package: frontespizio 2011/09/21 1.4a (Enrico Gregorio)
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\afterpage.st
-y"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\afterpage.s
+ty
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks19
-\AP@partial=\box45
-\AP@footins=\box46
+\AP@partial=\box47
+\AP@footins=\box48
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
-sty"
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
-sty"
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
-ics.cfg"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
-x.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen144
-\Gin@req@width=\dimen145
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegsh
-i.sty"
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
-
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwar
-err.sty"
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.
-sty"
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-))
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/environ\environ.st
-y"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/environ\environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/trimspaces\trimspa
-ces.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\trimspaces.s
+ty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks20
-)
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifpdf.sty"
+) (C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-)
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\ifxetex.st
-y"
+) (C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 )
 \front@out=\write3
 \openout3 = `doc-frn.tex'.
 
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count180
+\c@float@type=\count190
 \float@exts=\toks21
-\float@box=\box47
+\float@box=\box49
 \@float@everytoks=\toks22
-\@floatcapt=\box48
+\@floatcapt=\box50
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
-y"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
-ty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen146
-\captionmargin@=\dimen147
-\captionwidth=\dimen148
-\caption@tempdima=\dimen149
-\caption@indent=\dimen150
-\caption@parindent=\dimen151
-\caption@hangindent=\dimen152
+\captionmargin=\dimen150
+\captionmargin@=\dimen151
+\captionwidth=\dimen152
+\caption@tempdima=\dimen153
+\caption@indent=\dimen154
+\caption@parindent=\dimen155
+\caption@hangindent=\dimen156
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count181
-\c@continuedfloat=\count182
+\c@caption@flags=\count191
+\c@continuedfloat=\count192
 Package caption Info: float package is loaded.
 )
-\c@KVtest=\count183
+\c@KVtest=\count193
 \sf@farskip=\skip49
-\sf@captopadj=\dimen153
+\sf@captopadj=\dimen157
 \sf@capskip=\skip50
 \sf@nearskip=\skip51
-\c@subfigure=\count184
-\c@subfigure@save=\count185
-\c@lofdepth=\count186
-\c@subtable=\count187
-\c@subtable@save=\count188
-\c@lotdepth=\count189
+\c@subfigure=\count194
+\c@subfigure@save=\count195
+\c@lofdepth=\count196
+\c@subtable=\count197
+\c@subtable@save=\count198
+\c@lotdepth=\count199
 \sf@top=\skip52
 \sf@bottom=\skip53
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\varioref.sty
-"
-Package: varioref 2020/01/23 v1.6c package for extended references (FMi)
-\c@vrcnt=\count190
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\varioref.st
+y
+Package: varioref 2020/08/11 v1.6e package for extended references (FMi)
+\c@vrcnt=\count266
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
-sty"
-Package: csquotes 2021-01-04 v5.2k context-sensitive quotations (JAW)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
-sty"
-Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count191
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count267
 )
-\csq@reset=\count192
-\csq@gtype=\count193
-\csq@glevel=\count194
-\csq@qlevel=\count195
-\csq@maxlvl=\count196
-\csq@tshold=\count197
+\csq@reset=\count268
+\csq@gtype=\count269
+\csq@glevel=\count270
+\csq@qlevel=\count271
+\csq@maxlvl=\count272
+\csq@tshold=\count273
 \csq@ltx@everypar=\toks23
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
-def"
-File: csquotes.def 2021-01-04 v5.2k csquotes generic definitions (JAW)
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
-cfg"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
-))
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
-y"
-Package: amsmath 2020/01/20 v2.17e AMS math features
+)) (C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip54
 
 For additional information on amsmath, use the `?' option.
-
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
-y"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
-"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
-\ex@=\dimen154
+\ex@=\dimen158
 ))
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
-"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen155
+\pmbraise@=\dimen159
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
-"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count198
-LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count199
-\leftroot@=\count266
-LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count267
-\DOTSCASE@=\count268
-LaTeX Info: Redefining \ldots on input line 486.
-LaTeX Info: Redefining \dots on input line 489.
-LaTeX Info: Redefining \cdots on input line 610.
-\Mathstrutbox@=\box49
-\strutbox@=\box50
-\big@size=\dimen156
-LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count269
-\c@MaxMatrixCols=\count270
+\inf@bad=\count274
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count275
+\leftroot@=\count276
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count277
+\DOTSCASE@=\count278
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+\big@size=\dimen160
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count279
+\c@MaxMatrixCols=\count280
 \dotsspace@=\muskip16
-\c@parentequation=\count271
-\dspbrk@lvl=\count272
+\c@parentequation=\count281
+\dspbrk@lvl=\count282
 \tag@help=\toks25
-\row@=\count273
-\column@=\count274
-\maxfields@=\count275
+\row@=\count283
+\column@=\count284
+\maxfields@=\count285
 \andhelp@=\toks26
-\eqnshift@=\dimen157
-\alignsep@=\dimen158
-\tagshift@=\dimen159
-\tagwidth@=\dimen160
-\totwidth@=\dimen161
-\lineht@=\dimen162
+\eqnshift@=\dimen161
+\alignsep@=\dimen162
+\tagshift@=\dimen163
+\tagwidth@=\dimen164
+\totwidth@=\dimen165
+\lineht@=\dimen166
 \@envbody=\toks27
 \multlinegap=\skip55
 \multlinetaggap=\skip56
 \mathdisplay@stack=\toks28
-LaTeX Info: Redefining \[ on input line 2859.
-LaTeX Info: Redefining \] on input line 2860.
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mathtool
-s.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
 Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
-
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count276
-\calc@Bcount=\count277
-\calc@Adimen=\dimen163
-\calc@Bdimen=\dimen164
+\calc@Acount=\count286
+\calc@Bcount=\count287
+\calc@Adimen=\dimen167
+\calc@Bdimen=\dimen168
 \calc@Askip=\skip57
 \calc@Bskip=\skip58
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count278
+\calc@Ccount=\count288
 \calc@Cskip=\skip59
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/mathtools\mhsetup.
-sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
-\g_MT_multlinerow_int=\count279
-\l_MT_multwidth_dim=\dimen165
+\g_MT_multlinerow_int=\count289
+\l_MT_multwidth_dim=\dimen169
 \origjot=\skip60
-\l_MT_shortvdotswithinadjustabove_dim=\dimen166
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen167
-\l_MT_above_intertext_sep=\dimen168
-\l_MT_below_intertext_sep=\dimen169
-\l_MT_above_shortintertext_sep=\dimen170
-\l_MT_below_shortintertext_sep=\dimen171
-\xmathstrut@box=\box51
-\xmathstrut@dim=\dimen172
+\l_MT_shortvdotswithinadjustabove_dim=\dimen170
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen171
+\l_MT_above_intertext_sep=\dimen172
+\l_MT_below_intertext_sep=\dimen173
+\l_MT_above_shortintertext_sep=\dimen174
+\l_MT_below_shortintertext_sep=\dimen175
+\xmathstrut@box=\box53
+\xmathstrut@dim=\dimen176
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
-d-pdfmode.def"
-File: l3backend-pdfmode.def 2020-05-05 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count280
-\l__pdf_internal_box=\box52
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-01-09 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count290
+\l__pdf_internal_box=\box54
 ) (doc.aux
 
 LaTeX Warning: Label `fig:' multiply defined.
@@ -414,34 +380,34 @@ LaTeX Font Info:    ... okay on input line 16.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
-df.mkii"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count281
-\scratchdimen=\dimen173
-\scratchbox=\box53
-\nofMPsegments=\count282
-\nofMParguments=\count283
+\scratchcounter=\count291
+\scratchdimen=\dimen177
+\scratchbox=\box55
+\nofMPsegments=\count292
+\nofMParguments=\count293
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count284
-\MPscratchDim=\dimen174
-\MPnumerator=\count285
-\makeMPintoPDFobject=\count286
+\MPscratchCnt=\count294
+\MPscratchDim=\dimen178
+\MPnumerator=\count295
+\makeMPintoPDFobject=\count296
 \everyMPtoPDFconversion=\toks30
 )
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
-pdf-base.sty"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\AtBeginShipoutBox=\box54
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
  [1
 
-{C:/Users/alice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (doc.toc)
+{C:/Users/marco/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+(doc.toc)
 \tf@toc=\write4
 \openout4 = `doc.toc'.
 
@@ -449,7 +415,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
 7.
 
-("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+(C:\Users\marco\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 69--71
@@ -495,11 +461,6 @@ File: ./img/skip_connection.png Graphic file (type png)
 Package pdftex.def Info: ./img/skip_connection.png  used on input line 183.
 (pdftex.def)             Requested size: 229.6648pt x 80.34111pt.
 
-Overfull \hbox (18.40451pt too wide) in paragraph at lines 183--184
-[][] 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 178--186
 
  []
@@ -524,24 +485,24 @@ aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 296--298
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 297--299
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--298
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
 
  []
 
 [7]
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 355--356
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 356--357
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 389--390
 
  []
 
@@ -549,26 +510,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--384
 <./img/sequential_hist.png, id=58, 428.802pt x 256.5585pt>
 File: ./img/sequential_hist.png Graphic file (type png)
 <use ./img/sequential_hist.png>
-Package pdftex.def Info: ./img/sequential_hist.png  used on input line 395.
+Package pdftex.def Info: ./img/sequential_hist.png  used on input line 401.
 (pdftex.def)             Requested size: 215.95956pt x 129.21065pt.
 File: ./img/sequential_hist.png Graphic file (type png)
 <use ./img/sequential_hist.png>
-Package pdftex.def Info: ./img/sequential_hist.png  used on input line 401.
+Package pdftex.def Info: ./img/sequential_hist.png  used on input line 407.
 (pdftex.def)             Requested size: 215.95956pt x 129.21065pt.
  [9 <./img/sequential_hist.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 416--420
+Underfull \hbox (badness 10000) in paragraph at lines 422--426
 
  []
 
 <./img/models/model1_acc.png, id=63, 373.395pt x 264.99pt>
 File: ./img/models/model1_acc.png Graphic file (type png)
 <use ./img/models/model1_acc.png>
-Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 453.
+Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 459.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 <./img/models/model1_loss.png, id=64, 373.395pt x 264.99pt>
 File: ./img/models/model1_loss.png Graphic file (type png)
 <use ./img/models/model1_loss.png>
-Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 457.
+Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 463.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 [10
 
@@ -576,118 +537,185 @@ Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 457.
 <./img/models/model4_acc.png, id=77, 373.395pt x 264.99pt>
 File: ./img/models/model4_acc.png Graphic file (type png)
 <use ./img/models/model4_acc.png>
-Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 567.
+Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 573.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 <./img/models/model4_loss.png, id=78, 373.395pt x 264.99pt>
 File: ./img/models/model4_loss.png Graphic file (type png)
 <use ./img/models/model4_loss.png>
-Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 571.
+Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 577.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 <./img/models/model5_acc.png, id=79, 373.395pt x 264.99pt>
 File: ./img/models/model5_acc.png Graphic file (type png)
 <use ./img/models/model5_acc.png>
-Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 602.
+Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 608.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 <./img/models/model5_loss.png, id=80, 373.395pt x 264.99pt>
 File: ./img/models/model5_loss.png Graphic file (type png)
 <use ./img/models/model5_loss.png>
-Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 606.
+Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 612.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
 [13 <./img/models/model4_acc.png> <./img/models/model4_loss.png>]
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 614--615
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 620--621
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 631--632
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 637--638
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
+ []
+
+<./img/resnet50_cosine.png, id=86, 362.007pt x 217.467pt>
+File: ./img/resnet50_cosine.png Graphic file (type png)
+<use ./img/resnet50_cosine.png>
+Package pdftex.def Info: ./img/resnet50_cosine.png  used on input line 666.
+(pdftex.def)             Requested size: 300.46573pt x 180.49754pt.
+
+Overfull \hbox (65.73048pt too wide) in paragraph at lines 666--667
+[][] 
  []
 
 [14 <./img/models/model5_acc.png> <./img/models/model5_loss.png>]
-<./img/models/model1_v2_acc.png, id=91, 373.395pt x 264.99pt>
+<./img/resnet50_visitedObj.png, id=92, 362.007pt x 217.467pt>
+File: ./img/resnet50_visitedObj.png Graphic file (type png)
+<use ./img/resnet50_visitedObj.png>
+Package pdftex.def Info: ./img/resnet50_visitedObj.png  used on input line 676.
+
+(pdftex.def)             Requested size: 224.44202pt x 134.82813pt.
+<./img/resnet50_map.png, id=93, 362.007pt x 217.467pt>
+File: ./img/resnet50_map.png Graphic file (type png)
+<use ./img/resnet50_map.png>
+Package pdftex.def Info: ./img/resnet50_map.png  used on input line 680.
+(pdftex.def)             Requested size: 224.44202pt x 134.82813pt.
+ [15 <./img/resnet50_cosine.png> <./img/resnet50_visitedObj.png> <./img/resnet5
+0_map.png>]
+<./img/models/model1_v2_acc.png, id=100, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_acc.png Graphic file (type png)
 <use ./img/models/model1_v2_acc.png>
-Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 682
+Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 721
 .
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model1_v2_loss.png, id=92, 373.395pt x 264.99pt>
+<./img/models/model1_v2_loss.png, id=101, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_loss.png Graphic file (type png)
 <use ./img/models/model1_v2_loss.png>
-Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 68
-6.
-(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
- [15 <./img/models/model1_v2_acc.png> <./img/models/model1_v2_loss.png>]
-<./img/models/ResNetV2_4_acc.png, id=98, 373.395pt x 264.99pt>
-File: ./img/models/ResNetV2_4_acc.png Graphic file (type png)
-<use ./img/models/ResNetV2_4_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 75
-9.
-(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_4_loss.png, id=99, 373.395pt x 264.99pt>
-File: ./img/models/ResNetV2_4_loss.png Graphic file (type png)
-<use ./img/models/ResNetV2_4_loss.png>
-Package pdftex.def Info: ./img/models/ResNetV2_4_loss.png  used on input line 7
-63.
-(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
- [16]
-<./img/models/ResNetV2_5_acc.png, id=103, 373.395pt x 264.99pt>
-File: ./img/models/ResNetV2_5_acc.png Graphic file (type png)
-<use ./img/models/ResNetV2_5_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 79
+Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 72
 5.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_5_loss.png, id=104, 373.395pt x 264.99pt>
-File: ./img/models/ResNetV2_5_loss.png Graphic file (type png)
-<use ./img/models/ResNetV2_5_loss.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 7
-99.
+
+[16 <./img/models/model1_v2_acc.png> <./img/models/model1_v2_loss.png>]
+<./img/models/ResNetV2_4_acc.png, id=107, 373.395pt x 264.99pt>
+File: ./img/models/ResNetV2_4_acc.png Graphic file (type png)
+<use ./img/models/ResNetV2_4_acc.png>
+Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 79
+8.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+<./img/models/ResNetV2_4_loss.png, id=108, 373.395pt x 264.99pt>
+File: ./img/models/ResNetV2_4_loss.png Graphic file (type png)
+<use ./img/models/ResNetV2_4_loss.png>
+Package pdftex.def Info: ./img/models/ResNetV2_4_loss.png  used on input line 8
+02.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
-Overfull \hbox (10.00842pt too wide) in paragraph at lines 807--808
+[17 <./img/models/ResNetV2_4_acc.png> <./img/models/ResNetV2_4_loss.png>]
+<./img/models/ResNetV2_5_acc.png, id=114, 373.395pt x 264.99pt>
+File: ./img/models/ResNetV2_5_acc.png Graphic file (type png)
+<use ./img/models/ResNetV2_5_acc.png>
+Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 83
+4.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+<./img/models/ResNetV2_5_loss.png, id=115, 373.395pt x 264.99pt>
+File: ./img/models/ResNetV2_5_loss.png Graphic file (type png)
+<use ./img/models/ResNetV2_5_loss.png>
+Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 8
+38.
+(pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
+
+Overfull \hbox (10.00842pt too wide) in paragraph at lines 846--847
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2
  []
 
-[17 <./img/models/ResNetV2_4_acc.png> <./img/models/ResNetV2_4_loss.png> <./img
-/models/ResNetV2_5_acc.png> <./img/models/ResNetV2_5_loss.png>] [18] (doc.aux)
+
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 859--860
+\T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
+aset us-ing the pre-trained net-work Resnet50v2,
+ []
+
+[18 <./img/models/ResNetV2_5_acc.png> <./img/models/ResNetV2_5_loss.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 900--902
+
+ []
+
+<./img/lineChart_g4.png, id=122, 1204.5pt x 803.0pt>
+File: ./img/lineChart_g4.png Graphic file (type png)
+<use ./img/lineChart_g4.png>
+Package pdftex.def Info: ./img/lineChart_g4.png  used on input line 908.
+(pdftex.def)             Requested size: 277.02917pt x 184.68611pt.
+
+Overfull \hbox (42.29393pt too wide) in paragraph at lines 908--909
+[][] 
+ []
+
+<./img/lineChart_h2.png, id=123, 1204.5pt x 803.0pt>
+File: ./img/lineChart_h2.png Graphic file (type png)
+<use ./img/lineChart_h2.png>
+Package pdftex.def Info: ./img/lineChart_h2.png  used on input line 919.
+(pdftex.def)             Requested size: 228.85738pt x 152.57158pt.
+<./img/lineChart_h2_objRetrieved.png, id=124, 1204.5pt x 803.0pt>
+File: ./img/lineChart_h2_objRetrieved.png Graphic file (type png)
+<use ./img/lineChart_h2_objRetrieved.png>
+Package pdftex.def Info: ./img/lineChart_h2_objRetrieved.png  used on input lin
+e 923.
+(pdftex.def)             Requested size: 228.85738pt x 152.57158pt.
+[19 <./img/lineChart_g4.png>]
+<./img/lineChart_w4.png, id=129, 1204.5pt x 803.0pt>
+File: ./img/lineChart_w4.png Graphic file (type png)
+<use ./img/lineChart_w4.png>
+Package pdftex.def Info: ./img/lineChart_w4.png  used on input line 933.
+(pdftex.def)             Requested size: 277.02917pt x 184.68611pt.
+
+Overfull \hbox (42.29393pt too wide) in paragraph at lines 933--934
+[][] 
+ []
+
+[20 <./img/lineChart_h2.png> <./img/lineChart_h2_objRetrieved.png> <./img/lineC
+hart_w4.png>] (doc.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6820 strings out of 480799
- 108652 string characters out of 2895785
- 390438 words of memory out of 3000000
- 22699 multiletter control sequences out of 15000+200000
- 546483 words of font info for 52 fonts, out of 3000000 for 9000
+ 6806 strings out of 479618
+ 108526 string characters out of 2865026
+ 444239 words of memory out of 3000000
+ 23851 multiletter control sequences out of 15000+200000
+ 417575 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,13n,49p,405b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
-ecti0800.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
-ec/dpi600\ecti1095.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts
-/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\alice\AppData\Local\MiKTeX
-\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\alice\AppData\Lo
-cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\alice\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Us
-ers\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.
-pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1095.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecrm2074.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/alice/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alice/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alice/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/User
-s/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (19 pages, 565187 bytes).
+ 83i,13n,88p,385b,330s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti
+0800.pk> <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecti1095.pk> <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\ecrm0800.pk> <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ectt1095.pk> <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\marco\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\marco\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\marco\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\marco\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\marco\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\marco\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/m
+arco/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi8.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmr10.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Users/marco/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on doc.pdf (21 pages, 894307 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
+ 503 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 91 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
