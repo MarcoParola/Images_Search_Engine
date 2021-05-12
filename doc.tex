@@ -987,60 +987,52 @@ The data included are both from the sequential search and the LSH index search. 
 
 
 \section{LSH index considerations}
-During this part of the project we analyzed space of the hyperparameter values after running different tests in the previous sections.\\
-All the following figure show some plot where the data are computed using the cosine similarity, but similar results are obtained using the euclidean distance, we didn't report them to avoid redundancy.\\
+During this part of the project we analyzed the space of the hyperparameter values after running different tests in the previous sections.\\
+All the following figures show some plots where the data are computed using the cosine similarity, but similar results are obtained using the euclidean distance, we didn't report them to avoid redundancy.\\
 
-The first aspect that we noted is that we obtained the highest values of the mAP setting low value of the number of hyperplane \textit{h} (h=2) fixed the length of the segment \textit{w} and the number of g-function \textit{g}, indeed increasing the value of h we can observe lower curves. \\
-Moreover we can observe that increasing the value of \textit{w} also the value of mAP increases.
+The first aspect that we noted is that we obtained the highest values of the mAP setting a low value of the number of hyperplanes \textit{h} (h=2) fixed the length of the segment \textit{w} and the number of g-functions \textit{g}: indeed increasing the value of h we can observe lower curves. \\
+Moreover we can observe that increasing the value of \textit{w}, also the value of mAP increases.
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.5\textwidth}
-        \includegraphics[scale=0.23]{./img/lineChart_g4.png}
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=1.\textwidth]{./img/lineChart_g4.png}
     \end{minipage}
+    \caption{Resnet50v2 fine tuned model 5 - \textbf{mAP} trend with fixed $g=4$}
 \vspace{2mm}
 \end{figure}
 
 
-The following two figures show the variation of the mAP value and the number of visited objects when we increase the number of g-function.
+The following two figures show the variation of the mAP value and the number of visited objects when we increase the number of g-functions.
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.5\textwidth}
+    \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[scale=0.19]{./img/lineChart_h2.png}
+        \includegraphics[width=1.\textwidth]{./img/lineChart_h2.png}
+        \caption{Resnet50v2 fine tuned model 5 - \textbf{mAP} trend with fixed $h=2$}
     \end{minipage}\hfill
-    \begin{minipage}{0.5\textwidth}
+    \hspace{1mm}
+    \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[scale=0.19]{./img/lineChart_h2_objRetrieved.png}
+        \includegraphics[width=1.\textwidth]{./img/lineChart_h2_objRetrieved.png}
+        \caption{Resnet50v2 fine tuned model 5 - \textbf{visited objects} trend with fixed $h=2$}
     \end{minipage}
 \end{figure}
 \vspace{3mm}
 
 
-The following figure shows the decrease of the mAP value when we increase the number of hyperplanes for each g-function.
+The following figure shows the decrease of the mAP value when we increase the number of hyperplanes for each g-function. We can observe this trend, not only for the model in figure but also for all the other models we worked with.
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.5\textwidth}
-        \includegraphics[scale=0.23]{./img/lineChart_w4.png}
+    \begin{minipage}{0.65\textwidth}
+        \includegraphics[width=1.\textwidth]{./img/lineChart_w4.png}
     \end{minipage}
+    \caption{Resnet50 feature extraction model - \textbf{mAP} trend with fixed $w=4$}
 \vspace{2mm}
 \end{figure}
 
 
 
 \clearpage
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

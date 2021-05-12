@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  11 MAY 2021 13:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  12 MAY 2021 16:29
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -354,6 +354,15 @@ LaTeX Warning: Label `fig:' multiply defined.
 
 
 LaTeX Warning: Label `fig:scratch_matrix' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
+
+
+LaTeX Warning: Label `fig:' multiply defined.
 
 
 LaTeX Warning: Label `fig:' multiply defined.
@@ -748,37 +757,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 990--992
 
  []
 
-<./img/lineChart_g4.png, id=149, 1204.5pt x 803.0pt>
+<./img/lineChart_g4.png, id=149, 1177.39874pt x 762.85pt>
 File: ./img/lineChart_g4.png Graphic file (type png)
 <use ./img/lineChart_g4.png>
 Package pdftex.def Info: ./img/lineChart_g4.png  used on input line 998.
-(pdftex.def)             Requested size: 277.02917pt x 184.68611pt.
-
-Overfull \hbox (42.29393pt too wide) in paragraph at lines 998--999
-[][] 
- []
-
-<./img/lineChart_h2.png, id=150, 1204.5pt x 803.0pt>
+(pdftex.def)             Requested size: 305.15294pt x 197.70775pt.
+<./img/lineChart_h2.png, id=150, 1178.4025pt x 768.8725pt>
 File: ./img/lineChart_h2.png Graphic file (type png)
 <use ./img/lineChart_h2.png>
-Package pdftex.def Info: ./img/lineChart_h2.png  used on input line 1009.
-(pdftex.def)             Requested size: 228.85738pt x 152.57158pt.
-<./img/lineChart_h2_objRetrieved.png, id=151, 1204.5pt x 803.0pt>
+Package pdftex.def Info: ./img/lineChart_h2.png  used on input line 1010.
+(pdftex.def)             Requested size: 230.0431pt x 150.0879pt.
+<./img/lineChart_h2_objRetrieved.png, id=151, 888.31876pt x 578.16pt>
 File: ./img/lineChart_h2_objRetrieved.png Graphic file (type png)
 <use ./img/lineChart_h2_objRetrieved.png>
 Package pdftex.def Info: ./img/lineChart_h2_objRetrieved.png  used on input lin
-e 1013.
-(pdftex.def)             Requested size: 228.85738pt x 152.57158pt.
+e 1016.
+(pdftex.def)             Requested size: 230.0431pt x 149.71815pt.
 <./img/lineChart_w4.png, id=152, 1204.5pt x 803.0pt>
 File: ./img/lineChart_w4.png Graphic file (type png)
 <use ./img/lineChart_w4.png>
-Package pdftex.def Info: ./img/lineChart_w4.png  used on input line 1023.
-(pdftex.def)             Requested size: 277.02917pt x 184.68611pt.
-
-Overfull \hbox (42.29393pt too wide) in paragraph at lines 1023--1024
-[][] 
- []
-
+Package pdftex.def Info: ./img/lineChart_w4.png  used on input line 1027.
+(pdftex.def)             Requested size: 305.15294pt x 203.43286pt.
 [22
 
  <./img/lineChart_g4.png> <./img/lineChart_h2.png> <./img/lineChart_h2_objRetri
@@ -794,7 +793,7 @@ Here is how much of TeX's memory you used:
  22806 multiletter control sequences out of 15000+200000
  546483 words of font info for 52 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,13n,49p,543b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 48i,13n,49p,543b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
 ecti0800.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/
 ec/dpi600\ecti1095.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
@@ -815,9 +814,9 @@ s/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
 pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr8.pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (24 pages, 1282909 bytes).
+Output written on doc.pdf (24 pages, 1282138 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
+ 534 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
