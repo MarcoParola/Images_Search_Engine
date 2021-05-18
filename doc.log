@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  18 MAY 2021 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  18 MAY 2021 15:21
 entering extended mode
 **./doc.tex
 (doc.tex
@@ -472,315 +472,321 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+<img/unipi.png, id=1, 287.0725pt x 293.095pt>
+File: img/unipi.png Graphic file (type png)
+<use img/unipi.png>
+Package pdftex.def Info: img/unipi.png  used on input line 31.
+(pdftex.def)             Requested size: 140.84258pt x 143.80116pt.
  [1
 
-{C:/Users/alice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (doc.toc)
+{C:/Users/alice/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/unipi
+.png>] (doc.toc)
 \tf@toc=\write4
 \openout4 = `doc.toc'.
 
  [1]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
-7.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6
+8.
 
 ("C:\Users\alice\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-<./img/train_histogram.png, id=13, 1204.5pt x 803.0pt>
+<./img/train_histogram.png, id=17, 1204.5pt x 803.0pt>
 File: ./img/train_histogram.png Graphic file (type png)
 <use ./img/train_histogram.png>
-Package pdftex.def Info: ./img/train_histogram.png  used on input line 78.
+Package pdftex.def Info: ./img/train_histogram.png  used on input line 89.
 (pdftex.def)             Requested size: 211.26028pt x 140.83342pt.
-<./img/train_pie.png, id=15, 1204.5pt x 803.0pt>
+<./img/train_pie.png, id=18, 1204.5pt x 803.0pt>
 File: ./img/train_pie.png Graphic file (type png)
 <use ./img/train_pie.png>
-Package pdftex.def Info: ./img/train_pie.png  used on input line 84.
+Package pdftex.def Info: ./img/train_pie.png  used on input line 95.
 (pdftex.def)             Requested size: 211.26028pt x 140.83342pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 [2
 
  <./img/train_histogram.png> <./img/train_pie.png>]
-<./img/val_histogram.png, id=24, 1204.5pt x 803.0pt>
+<./img/val_histogram.png, id=27, 1204.5pt x 803.0pt>
 File: ./img/val_histogram.png Graphic file (type png)
 <use ./img/val_histogram.png>
-Package pdftex.def Info: ./img/val_histogram.png  used on input line 96.
+Package pdftex.def Info: ./img/val_histogram.png  used on input line 107.
 (pdftex.def)             Requested size: 215.95956pt x 143.97014pt.
-<./img/val_pie.png, id=25, 1204.5pt x 803.0pt>
+<./img/val_pie.png, id=28, 1204.5pt x 803.0pt>
 File: ./img/val_pie.png Graphic file (type png)
 <use ./img/val_pie.png>
-Package pdftex.def Info: ./img/val_pie.png  used on input line 102.
+Package pdftex.def Info: ./img/val_pie.png  used on input line 113.
 (pdftex.def)             Requested size: 215.95956pt x 143.97014pt.
  [3 <./img/val_histogram.png> <./img/val_pie.png>]
-<./img/skip_connection.png, id=37, 499.26524pt x 174.6525pt>
+<./img/skip_connection.png, id=40, 499.26524pt x 174.6525pt>
 File: ./img/skip_connection.png Graphic file (type png)
 <use ./img/skip_connection.png>
-Package pdftex.def Info: ./img/skip_connection.png  used on input line 183.
+Package pdftex.def Info: ./img/skip_connection.png  used on input line 194.
 (pdftex.def)             Requested size: 229.6648pt x 80.34111pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--186
+Underfull \hbox (badness 10000) in paragraph at lines 189--197
 
  []
 
 [4
 
  <./img/skip_connection.png>]
-Overfull \hbox (13.05951pt too wide) in paragraph at lines 218--220
+Overfull \hbox (13.05951pt too wide) in paragraph at lines 229--231
 \T1/cmr/m/n/10.95 First, we cal-cu-lated the av-er-age dis-tance be-tween the f
 ea-tures ex-tracted from Resnet50 and Resnet50v2,
  []
 
 
-Overfull \hbox (10.58875pt too wide) in paragraph at lines 235--243
+Overfull \hbox (10.58875pt too wide) in paragraph at lines 246--254
  [] 
  []
 
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 251--253
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 262--264
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 251--253
+Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
  []
 
 [5]
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 329--331
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 340--342
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
 
  []
 
 [6]
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 388--389
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 399--400
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
 [7]
-<./img/sequential_hist.png, id=55, 428.802pt x 256.5585pt>
+<./img/sequential_hist.png, id=58, 428.802pt x 256.5585pt>
 File: ./img/sequential_hist.png Graphic file (type png)
 <use ./img/sequential_hist.png>
-Package pdftex.def Info: ./img/sequential_hist.png  used on input line 431.
+Package pdftex.def Info: ./img/sequential_hist.png  used on input line 442.
 (pdftex.def)             Requested size: 305.15294pt x 182.58452pt.
-<./img/FE_visitedObj.png, id=56, 245.061pt x 353.904pt>
+<./img/FE_visitedObj.png, id=59, 245.061pt x 353.904pt>
 File: ./img/FE_visitedObj.png Graphic file (type png)
 <use ./img/FE_visitedObj.png>
-Package pdftex.def Info: ./img/FE_visitedObj.png  used on input line 451.
+Package pdftex.def Info: ./img/FE_visitedObj.png  used on input line 462.
 (pdftex.def)             Requested size: 211.26028pt x 305.10753pt.
-<./img/FE_map.png, id=57, 362.007pt x 217.467pt>
+<./img/FE_map.png, id=60, 362.007pt x 217.467pt>
 File: ./img/FE_map.png Graphic file (type png)
 <use ./img/FE_map.png>
-Package pdftex.def Info: ./img/FE_map.png  used on input line 457.
+Package pdftex.def Info: ./img/FE_map.png  used on input line 468.
 (pdftex.def)             Requested size: 253.51091pt x 152.2922pt.
-<./img/FE_cosine.png, id=58, 361.788pt x 217.467pt>
+<./img/FE_cosine.png, id=61, 361.788pt x 217.467pt>
 File: ./img/FE_cosine.png Graphic file (type png)
 <use ./img/FE_cosine.png>
-Package pdftex.def Info: ./img/FE_cosine.png  used on input line 462.
+Package pdftex.def Info: ./img/FE_cosine.png  used on input line 473.
 (pdftex.def)             Requested size: 253.51091pt x 152.38512pt.
  [8 <./img/sequential_hist.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 474--478
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
 
  []
 
 [9 <./img/FE_visitedObj.png> <./img/FE_map.png> <./img/FE_cosine.png>]
-<./img/models/model1_acc.png, id=69, 373.395pt x 264.99pt>
+<./img/models/model1_acc.png, id=72, 373.395pt x 264.99pt>
 File: ./img/models/model1_acc.png Graphic file (type png)
 <use ./img/models/model1_acc.png>
-Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 511.
+Package pdftex.def Info: ./img/models/model1_acc.png  used on input line 522.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model1_loss.png, id=70, 373.395pt x 264.99pt>
+<./img/models/model1_loss.png, id=73, 373.395pt x 264.99pt>
 File: ./img/models/model1_loss.png Graphic file (type png)
 <use ./img/models/model1_loss.png>
-Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 515.
+Package pdftex.def Info: ./img/models/model1_loss.png  used on input line 526.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
  [10 <./img/models/model1_acc.png> <./img/models/model1_loss.png>] [11]
-<./img/models/model4_acc.png, id=79, 373.395pt x 264.99pt>
+<./img/models/model4_acc.png, id=82, 373.395pt x 264.99pt>
 File: ./img/models/model4_acc.png Graphic file (type png)
 <use ./img/models/model4_acc.png>
-Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 625.
+Package pdftex.def Info: ./img/models/model4_acc.png  used on input line 636.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model4_loss.png, id=80, 373.395pt x 264.99pt>
+<./img/models/model4_loss.png, id=83, 373.395pt x 264.99pt>
 File: ./img/models/model4_loss.png Graphic file (type png)
 <use ./img/models/model4_loss.png>
-Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 629.
+Package pdftex.def Info: ./img/models/model4_loss.png  used on input line 640.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
  [12 <./img/models/model4_acc.png> <./img/models/model4_loss.png>]
-<./img/models/model5_acc.png, id=87, 373.395pt x 264.99pt>
+<./img/models/model5_acc.png, id=90, 373.395pt x 264.99pt>
 File: ./img/models/model5_acc.png Graphic file (type png)
 <use ./img/models/model5_acc.png>
-Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 660.
+Package pdftex.def Info: ./img/models/model5_acc.png  used on input line 671.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model5_loss.png, id=88, 373.395pt x 264.99pt>
+<./img/models/model5_loss.png, id=91, 373.395pt x 264.99pt>
 File: ./img/models/model5_loss.png Graphic file (type png)
 <use ./img/models/model5_loss.png>
-Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 664.
+Package pdftex.def Info: ./img/models/model5_loss.png  used on input line 675.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 672--673
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 683--684
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 
-Overfull \hbox (1.84442pt too wide) in paragraph at lines 689--690
+Overfull \hbox (1.84442pt too wide) in paragraph at lines 700--701
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50,
  []
 
 [13 <./img/models/model5_acc.png> <./img/models/model5_loss.png>]
-<./img/resnet50_visitedObj.png, id=94, 260.829pt x 446.541pt>
+<./img/resnet50_visitedObj.png, id=97, 260.829pt x 446.541pt>
 File: ./img/resnet50_visitedObj.png Graphic file (type png)
 <use ./img/resnet50_visitedObj.png>
-Package pdftex.def Info: ./img/resnet50_visitedObj.png  used on input line 722.
+Package pdftex.def Info: ./img/resnet50_visitedObj.png  used on input line 733.
 
 (pdftex.def)             Requested size: 187.78532pt x 321.48883pt.
-<./img/resnet50_map.png, id=95, 362.007pt x 217.467pt>
+<./img/resnet50_map.png, id=98, 362.007pt x 217.467pt>
 File: ./img/resnet50_map.png Graphic file (type png)
 <use ./img/resnet50_map.png>
-Package pdftex.def Info: ./img/resnet50_map.png  used on input line 728.
+Package pdftex.def Info: ./img/resnet50_map.png  used on input line 739.
 (pdftex.def)             Requested size: 267.60161pt x 160.75713pt.
-<./img/resnet50_cosine.png, id=96, 362.007pt x 217.467pt>
+<./img/resnet50_cosine.png, id=99, 362.007pt x 217.467pt>
 File: ./img/resnet50_cosine.png Graphic file (type png)
 <use ./img/resnet50_cosine.png>
-Package pdftex.def Info: ./img/resnet50_cosine.png  used on input line 733.
+Package pdftex.def Info: ./img/resnet50_cosine.png  used on input line 744.
 (pdftex.def)             Requested size: 267.60161pt x 160.75713pt.
  [14 <./img/resnet50_visitedObj.png> <./img/resnet50_map.png> <./img/resnet50_c
 osine.png>]
-<./img/models/model1_v2_acc.png, id=103, 373.395pt x 264.99pt>
+<./img/models/model1_v2_acc.png, id=106, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_acc.png Graphic file (type png)
 <use ./img/models/model1_v2_acc.png>
-Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 775
+Package pdftex.def Info: ./img/models/model1_v2_acc.png  used on input line 786
 .
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/model1_v2_loss.png, id=104, 373.395pt x 264.99pt>
+<./img/models/model1_v2_loss.png, id=107, 373.395pt x 264.99pt>
 File: ./img/models/model1_v2_loss.png Graphic file (type png)
 <use ./img/models/model1_v2_loss.png>
-Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 77
-9.
+Package pdftex.def Info: ./img/models/model1_v2_loss.png  used on input line 79
+0.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
 [15 <./img/models/model1_v2_acc.png> <./img/models/model1_v2_loss.png>]
 [16]
-<./img/models/ResNetV2_4_acc.png, id=113, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_4_acc.png, id=116, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_4_acc.png Graphic file (type png)
 <use ./img/models/ResNetV2_4_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 85
-2.
+Package pdftex.def Info: ./img/models/ResNetV2_4_acc.png  used on input line 86
+3.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_4_loss.png, id=114, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_4_loss.png, id=117, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_4_loss.png Graphic file (type png)
 <use ./img/models/ResNetV2_4_loss.png>
 Package pdftex.def Info: ./img/models/ResNetV2_4_loss.png  used on input line 8
-56.
+67.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_5_acc.png, id=115, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_5_acc.png, id=118, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_5_acc.png Graphic file (type png)
 <use ./img/models/ResNetV2_5_acc.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 88
-8.
+Package pdftex.def Info: ./img/models/ResNetV2_5_acc.png  used on input line 89
+9.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
-<./img/models/ResNetV2_5_loss.png, id=116, 373.395pt x 264.99pt>
+<./img/models/ResNetV2_5_loss.png, id=119, 373.395pt x 264.99pt>
 File: ./img/models/ResNetV2_5_loss.png Graphic file (type png)
 <use ./img/models/ResNetV2_5_loss.png>
-Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 8
-92.
+Package pdftex.def Info: ./img/models/ResNetV2_5_loss.png  used on input line 9
+03.
 (pdftex.def)             Requested size: 171.76378pt x 121.89687pt.
 
-Overfull \hbox (10.00842pt too wide) in paragraph at lines 900--901
+Overfull \hbox (10.00842pt too wide) in paragraph at lines 911--912
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2
  []
 
 [17 <./img/models/ResNetV2_4_acc.png> <./img/models/ResNetV2_4_loss.png> <./img
 /models/ResNetV2_5_acc.png> <./img/models/ResNetV2_5_loss.png>]
-Overfull \hbox (13.03452pt too wide) in paragraph at lines 913--915
+Overfull \hbox (13.03452pt too wide) in paragraph at lines 924--926
 \T1/cmr/m/n/10.95 During this sec-tion we ex-tracted the fea-tures from the dat
 aset us-ing the pre-trained net-work Resnet50v2,
  []
 
-<./img/resnet50v2_visitedObj.png, id=124, 286.014pt x 448.95pt>
+<./img/resnet50v2_visitedObj.png, id=127, 286.014pt x 448.95pt>
 File: ./img/resnet50v2_visitedObj.png Graphic file (type png)
 <use ./img/resnet50v2_visitedObj.png>
-Package pdftex.def Info: ./img/resnet50v2_visitedObj.png  used on input line 95
-6.
+Package pdftex.def Info: ./img/resnet50v2_visitedObj.png  used on input line 96
+7.
 (pdftex.def)             Requested size: 201.86887pt x 316.87971pt.
-<./img/resnet50v2_map.png, id=125, 362.007pt x 217.467pt>
+<./img/resnet50v2_map.png, id=128, 362.007pt x 217.467pt>
 File: ./img/resnet50v2_map.png Graphic file (type png)
 <use ./img/resnet50v2_map.png>
-Package pdftex.def Info: ./img/resnet50v2_map.png  used on input line 962.
+Package pdftex.def Info: ./img/resnet50v2_map.png  used on input line 973.
 (pdftex.def)             Requested size: 262.90231pt x 157.93327pt.
-<./img/resnet50v2_cosine.png, id=126, 362.007pt x 217.467pt>
+<./img/resnet50v2_cosine.png, id=129, 362.007pt x 217.467pt>
 File: ./img/resnet50v2_cosine.png Graphic file (type png)
 <use ./img/resnet50v2_cosine.png>
-Package pdftex.def Info: ./img/resnet50v2_cosine.png  used on input line 967.
+Package pdftex.def Info: ./img/resnet50v2_cosine.png  used on input line 978.
 (pdftex.def)             Requested size: 262.90231pt x 157.93327pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--971
+Underfull \hbox (badness 10000) in paragraph at lines 962--982
 
  []
 
 [18]
-<./img/FT_visitedObj.png, id=131, 245.061pt x 353.904pt>
+<./img/FT_visitedObj.png, id=134, 245.061pt x 353.904pt>
 File: ./img/FT_visitedObj.png Graphic file (type png)
 <use ./img/FT_visitedObj.png>
-Package pdftex.def Info: ./img/FT_visitedObj.png  used on input line 993.
+Package pdftex.def Info: ./img/FT_visitedObj.png  used on input line 1004.
 (pdftex.def)             Requested size: 211.26028pt x 305.10753pt.
-<./img/FT_map.png, id=132, 362.007pt x 217.467pt>
+<./img/FT_map.png, id=135, 362.007pt x 217.467pt>
 File: ./img/FT_map.png Graphic file (type png)
 <use ./img/FT_map.png>
-Package pdftex.def Info: ./img/FT_map.png  used on input line 999.
+Package pdftex.def Info: ./img/FT_map.png  used on input line 1010.
 (pdftex.def)             Requested size: 253.51091pt x 152.2922pt.
-<./img/FT_cosine.png, id=133, 361.788pt x 217.467pt>
+<./img/FT_cosine.png, id=136, 361.788pt x 217.467pt>
 File: ./img/FT_cosine.png Graphic file (type png)
 <use ./img/FT_cosine.png>
-Package pdftex.def Info: ./img/FT_cosine.png  used on input line 1004.
+Package pdftex.def Info: ./img/FT_cosine.png  used on input line 1015.
 (pdftex.def)             Requested size: 253.51091pt x 152.38512pt.
  [19 <./img/resnet50v2_visitedObj.png> <./img/resnet50v2_map.png> <./img/resnet
 50v2_cosine.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1025
 
  []
 
-<./img/lineChart_g4.png, id=140, 1177.39874pt x 762.85pt>
+<./img/lineChart_g4.png, id=143, 1177.39874pt x 762.85pt>
 File: ./img/lineChart_g4.png Graphic file (type png)
 <use ./img/lineChart_g4.png>
-Package pdftex.def Info: ./img/lineChart_g4.png  used on input line 1020.
+Package pdftex.def Info: ./img/lineChart_g4.png  used on input line 1031.
 (pdftex.def)             Requested size: 234.73524pt x 152.07841pt.
-<./img/lineChart_h2.png, id=141, 1178.4025pt x 768.8725pt>
+<./img/lineChart_h2.png, id=144, 1178.4025pt x 768.8725pt>
 File: ./img/lineChart_h2.png Graphic file (type png)
 <use ./img/lineChart_h2.png>
-Package pdftex.def Info: ./img/lineChart_h2.png  used on input line 1031.
+Package pdftex.def Info: ./img/lineChart_h2.png  used on input line 1042.
 (pdftex.def)             Requested size: 230.0431pt x 150.0879pt.
-<./img/lineChart_h2_objRetrieved.png, id=142, 888.31876pt x 578.16pt>
+<./img/lineChart_h2_objRetrieved.png, id=145, 888.31876pt x 578.16pt>
 File: ./img/lineChart_h2_objRetrieved.png Graphic file (type png)
 <use ./img/lineChart_h2_objRetrieved.png>
 Package pdftex.def Info: ./img/lineChart_h2_objRetrieved.png  used on input lin
-e 1037.
+e 1048.
 (pdftex.def)             Requested size: 230.0431pt x 149.71815pt.
 [20 <./img/FT_visitedObj.png> <./img/FT_map.png> <./img/FT_cosine.png> <./img/l
 ineChart_g4.png>]
-<./img/lineChart_w4.png, id=150, 1204.5pt x 803.0pt>
+<./img/lineChart_w4.png, id=153, 1204.5pt x 803.0pt>
 File: ./img/lineChart_w4.png Graphic file (type png)
 <use ./img/lineChart_w4.png>
-Package pdftex.def Info: ./img/lineChart_w4.png  used on input line 1048.
+Package pdftex.def Info: ./img/lineChart_w4.png  used on input line 1059.
 (pdftex.def)             Requested size: 234.73524pt x 156.48022pt.
  [21 <./img/lineChart_h2.png> <./img/lineChart_h2_objRetrieved.png> <./img/line
 Chart_w4.png>] (doc.aux)
@@ -789,11 +795,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6943 strings out of 480799
- 111666 string characters out of 2895785
+ 6954 strings out of 480799
+ 111810 string characters out of 2895785
  390440 words of memory out of 3000000
- 22806 multiletter control sequences out of 15000+200000
- 546483 words of font info for 52 fonts, out of 3000000 for 9000
+ 22814 multiletter control sequences out of 15000+200000
+ 547257 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,13n,49p,543b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
@@ -803,22 +809,23 @@ ec/dpi600\ecti1095.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour
 /pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\alice\AppData\Local\MiKTeX
 \2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\alice\AppData\Lo
 cal\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\alice\
-AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Us
-ers\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.
+AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Us
+ers\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.
 pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600
-\ecrm1095.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
+\ecbx1440.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen
 /ec/dpi600\ecrm2074.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\fonts/pk/ljfou
-r/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/alice/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alice/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/alice/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/User
-s/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
-pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb>
-Output written on doc.pdf (22 pages, 1284039 bytes).
+r/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\alice\AppData\Local\MiKTeX\2.9\font
+s/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk><C:/Users/alice/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/alice/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/
+alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pf
+b><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr8.pfb><C:/Users/alice/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on doc.pdf (22 pages, 1334686 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
+ 562 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
