@@ -66,10 +66,12 @@ for filename in os.listdir(VALIDATION_DATA):
       print("ERROR" + VALIDATION_DATA + filename)
       os.remove(VALIDATION_DATA + filename)
 \end{verbatim}
-The final training set is composed by a total of 7786 images, while the validation set has a total of 856 images. \\ 
-The following figures show the distribution of the classes of the training set, after the execution of the snippet of code shown above :\\
+The final training set is composed by a total of \textbf{7786} images, while the validation set counts a total of \textbf{856} images.
 
-\begin{figure}[h]
+\subsection{Class distribution}
+The following figures show the distribution of the classes of the training set, after the execution of the snippet of code shown in the previous section :\\
+
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.45\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -85,9 +87,9 @@ The following figures show the distribution of the classes of the training set, 
 \end{figure}
 
 \vspace{10mm}
-The following figures show the distribution of the classes of the validation set, after the execution of the snippet of code shown above :\\
+The following figures show the distribution of the classes of the validation set, after the execution of the snippet of code shown in the previous section :\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.46\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -102,8 +104,6 @@ The following figures show the distribution of the classes of the validation set
 	\end{minipage}%
 \end{figure}
 
-
-\clearpage
 
 
 %------------------------- SEQUENTIAL SEARCH -----------------------
@@ -162,7 +162,7 @@ We defined \textit{L} hash functions, corresponding to \textit{L} buckets, then 
 When a query is passed to the search engine, its features are hashed using each g function and the corresponding buckets are identified. The elements belonging to them are retrieved and sorted, in order to select the top-k more similar to the query.
 
 
-\clearpage
+
 
 % ---------------------------------- FEATURES EXTRACTION -------------------------------------
 \section{Features extraction}
@@ -212,6 +212,37 @@ training_features = extract_features(conv_base,
 np.save(FILE_TRAINING_FEATURES, training_features)
 
 \end{verbatim}
+
+
+\subsection{Distance distribution}
+At this point, we performed a quick analysis on the distribution of distances among the objects in our training-set (or rather among the features extracted from the objects). This was done so that we could better interpret the data that we will obtain in the following sections by applying the k-NN search algorithm. \\
+First, we calculated the average distance between the features extracted from Resnet50 and Resnet50v2, both with the Euclidean distance and with the Cosine simiarity metrics.
+
+\begin{center}
+\begin{tabular}{|l|cc|}
+\hline
+ &  mean Euclidian dist. & mean Cosine sim. \\
+\hline
+Resnet50   & 3.015  & 0.994  \\
+Resnet50v2 & 31.467 & 0.3614 \\
+\hline
+\end{tabular}
+\end{center}
+
+To complete the analysis, we also calculated the average distance between features divided by class, in this case using only the Euclidean distance for brevity. The results are shown below.
+
+\begin{center}
+\begin{tabular}{|l|ccccc|}
+\hline
+mean Euclidian dist. & 0 - drawings & 1 - engraving & 2 - iconography & 3 - painting & 4 - sculpture \\
+\hline
+Resnet50   & 3.2472 & 4.3399  & 3.0041  & 2.5269 & 2.8741  \\
+Resnet50v2 & 31.199 & 31.7557 & 30.0471 & 31.078 & 33.727  \\
+\hline
+\end{tabular}
+\end{center}
+
+Looking at both the tables, we can conclude that the features extracted with Resnet50 are much closer and similar than the features extracted with Resnet50v2. In addition, the distinct values by class are close to the mean value. This means that also in the search results we will get higher distance values for the second network with respect to the first one.
 
 
 
@@ -391,9 +422,7 @@ We performed different tests varying the value of \textit{w}; in the previous ta
 
 \subsection{Conclusion of the Features Extraction approach}
 Observing the results obtained from the experiments based on features extraction approach, we can say that the distances between the features of the objects extracted with Resnet50v2 are greater than that obtained using Resnet50. \\
-Indeed passing an image as a query, the average euclidean distance between it and its k-nearest neighbor using Resnet50 is about $1.2$ while using Resnet50v2 is about $25$. Moreover the cosine similarity using Resnet50 is about $0.99$ while using Resnet50v2 is about $0.5$. \vspace{2mm} \\
-%TODO: non mi torna questo discorso sotto %%
-%It is interesting to note that given a certain value of \textit{g} and varying the value of \textit{h}, the best results are given for h=3, because for greater value the mAP always decreases, while for smaller ones (h=2) in some cases the mAP decreases, in others increases, but we also observe a very significant increase in the number of the items to sort.\vspace{2mm} \\
+Indeed passing an image as a query, the average euclidean distance between it and its k-nearest neighbor using Resnet50 is about $1.2$ while using Resnet50v2 is about $25$. Moreover the cosine similarity using Resnet50 is about $0.99$ while using Resnet50v2 is about $0.5$. \vspace{2mm}
 
 \begin{figure}[h]
 \centering
@@ -405,14 +434,17 @@ Indeed passing an image as a query, the average euclidean distance between it an
 \end{figure}
 
 We can see from the figure above that the difference between the Euclidean distance and the Cosine similarity in the search is minimal. In addition, while having features with a larger scale, the Resnet50v2 network has better performace than the Resnet50. \vspace{5mm} \\
-In order to better compare the results obtained so far, we reported some other histograms. \\
+In order to better compare the results obtained so far, we reported some other histograms (next page). \\
 The data included are both from the sequential search and the LSH index search. For the latter, the hyper-parameters taken for the comparison are:
 \begin{itemize}
 \item Resnet50: $g=8, h=2, w=4$
 \item Resnet50v2: $g=7, h=2, w=8$
 \end{itemize}
 
-\begin{figure}[h]
+If we look at the sequential search performance, Resnet50v2 gets worse by 8\% while Resnet50 only worsens by 2\%. However, we can see that Resnet50v2 has a better mAP even with the index, with 82\% compared to 69\% of Resnet50. We also have to point out that the average number of objects visited per query by Resnet50v2 is 8 times lower than Resnet50, and this might be the reason why there is so much difference in the mAP from sequential to LSH of the first mentioned network. \\
+In the next approach, fine tuning, we will see that this phenomenon will be buffered. 
+
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.45\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -433,16 +465,8 @@ The data included are both from the sequential search and the LSH index search. 
 	\caption{Data comparision for the Feature Extraction approach}
 \end{figure}
 
-If we look at the sequential search performance, Resnet50v2 gets worse by 8\% while Resnet50 only worsens by 2\%. However, we can see that Resnet50v2 has a better mAP even with the index, with 82\% compared to 69\% of Resnet50. We also have to point out that the average number of objects visited per query by Resnet50v2 is 8 times lower than Resnet50, and this might be the reason why there is so much difference in the mAP from sequential to LSH of the first mentioned network. \\
-In the next approach, fine tuning, we will see that this phenomenon will be buffered. 
 
-
-\clearpage
-
-
-
-
-
+\vspace{4mm}
 
 % --------------------------------------- FINE TUNUNG ----------------------------------------
 
@@ -691,7 +715,7 @@ Below there are some histograms summarizing the results obtained with the Resnet
 After the re-training of the last blocks of the network on our training set, we can see that the mAP has increased to 78\% in the sequential search, and to 73\% in the indexed search. Not only do we have an increase in the mAP, but there is also a large decrease in the average number of objects visited per query, from 5304 to 1452. \\
 Both of these considerations lead us to conclude that this approach achieved the best index search with the Resnet50 network.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.4\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -925,7 +949,7 @@ Model 5 & g=7 h=2 w=5 &  0.814 & 11.293 & 0.863 & 0.606 & 1007\\
 
 \vspace{5mm} 
 Below there are some histograms summarizing the results obtained with the Resnet50v2 network. The index data are associated to the hyper-parameters  that gave the best performance in both the Feature Extraction ($g=7, h=2, w=8$) and Fine Tuning ($g=7, h=2, w=6$) approaches. Moreover, for the latter approach we refer to the Model 5 results.\vspace{3mm} \\
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.43\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -960,8 +984,9 @@ The data included are both from the sequential search and the LSH index search. 
 \item Resnet50 (model 4): $g=5, h=2, w=4$
 \item Resnet50v2 (model 5): $g=7, h=2, w=6$
 \end{itemize}
-
-\begin{figure}[h]
+\vspace{3mm}
+We see that, for the same average objects visited per query, the model built on Resnet50v2 offers much higher performance, with a mAp of 86\%, versus Resnet50's 73\%. 
+\begin{figure}[H]
 \centering
 	\begin{minipage}[c]{.45\textwidth}
 		\centering\setlength{\captionmargin}{0pt}%
@@ -981,10 +1006,7 @@ The data included are both from the sequential search and the LSH index search. 
 	\end{minipage}%
 	\caption{Data comparision for the Fine Tuning approach}
 \end{figure}
-
-
-\clearpage
-
+\vspace{2mm}
 
 \section{LSH index considerations}
 During this part of the project we analyzed the space of the hyperparameter values after running different tests in the previous sections.\\
@@ -994,11 +1016,10 @@ The first aspect that we noted is that we obtained the highest values of the mAP
 Moreover we can observe that increasing the value of \textit{w}, also the value of mAP increases.
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
+    \begin{minipage}{0.5\textwidth}
         \includegraphics[width=1.\textwidth]{./img/lineChart_g4.png}
     \end{minipage}
     \caption{Resnet50v2 fine tuned model 5 - \textbf{mAP} trend with fixed $g=4$}
-\vspace{2mm}
 \end{figure}
 
 
@@ -1023,7 +1044,7 @@ The following two figures show the variation of the mAP value and the number of 
 The following figure shows the decrease of the mAP value when we increase the number of hyperplanes for each g-function. We can observe this trend, not only for the model in figure but also for all the other models we worked with.
 \begin{figure}[H]
     \centering
-    \begin{minipage}{0.65\textwidth}
+    \begin{minipage}{0.5\textwidth}
         \includegraphics[width=1.\textwidth]{./img/lineChart_w4.png}
     \end{minipage}
     \caption{Resnet50 feature extraction model - \textbf{mAP} trend with fixed $w=4$}
