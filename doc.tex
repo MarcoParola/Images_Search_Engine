@@ -1063,9 +1063,46 @@ The following figure shows the decrease of the mAP value when we increase the nu
 \end{figure}
 
 
-
 \clearpage
+
+
+\section{Web application}
+Finally we developed a web application based on the best index created during the previous steps: the index is created using the 4th model based on Resnet50v2 fine tuned as pretrained neural network and the LSH index created with the following hyper-parameters:
+\begin{itemize}
+\item g = 7
+\item h = 2
+\item w = 6
+\end{itemize}
+We developed a demo web app application creating a python flask project as web server and a using bootstrap, a popular front-end open source toolkit based on html, css and javascript.
+
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=1.\textwidth]{./img/gui1.png}
+        \caption{Web gui, home page}
+    \end{minipage}\hfill
+    \hspace{1mm}
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[height=0.41\textwidth]{./img/gui2.png}
+        \caption{Web gui, select image as query}
+    \end{minipage}
+\end{figure}
+\vspace{3mm}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.5\textwidth}
+        \includegraphics[width=1.1\textwidth]{./img/gui3.png}
+    \end{minipage}
+    \caption{Web gui, list of results}
+\vspace{2mm}
+\end{figure}
+
 
 
 
 \end{document}
+
