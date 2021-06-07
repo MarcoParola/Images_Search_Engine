@@ -48,7 +48,7 @@
 % --------------------------------------- INTRO -------------------------------------------------------
 \section{Introduction}
 In this project we implemented a Web Search Engine working on the "ArtImages" dataset, and the "MirFlickr" dataset as distractor. 
-The Web Search Engine is based on the \textbf{Locality Sensitive Hashing} (LSH) index and on the pre-trained convolutional neural network ResNet50 with weigths computed on the "Imagenet" dataset.
+The Web Search Engine is based on the \textbf{Locality Sensitive Hashing} (LSH) index and on the pre-trained convolutional neural network ResNet50 with weights computed on the "Imagenet" dataset.
 
 
 
@@ -316,7 +316,7 @@ Note that the last column of the tables (\textit{$\#$Items}) gives the number of
 
 
 \subsubsection{LSH Index after Features Extraction, using Resnet50}
-During this section we extracted the features from the dataset using the pretrained network Resnet50 adopting a fine tuning technique and we computed a kNN search setting w=4, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50 adopting a features extraction technique and we computed a kNN search setting w=4, obtaining the following results:
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
@@ -331,7 +331,7 @@ g=4 h=5 & 0.556 & 1.491 & 0.630 & 0.998  & 922 \\
 \hline
 \end{tabular}
 \end{center}
-We tested the LSH index also with different values of \textit{w}, but we conclude that w=4 is the best values with Resnet50, because using lower values the buckets are sparse, while increasing \textit{w} the mAP remains constant.
+We tested the LSH index also with different values of \textit{w}, but we concluded that w=4 is the best values with Resnet50, because using lower values the buckets are sparse, while increasing \textit{w} the mAP remains constant.
 \vspace{2mm}
 
 % ------------
@@ -391,12 +391,13 @@ Resnet50v2 & 0.888 & 17.977 & 0.897 & 0.747 & 32791 \\
 \end{center}
 \vspace{3mm}
 From the previous tables we can observe a very small decrease in the mAP values introducing the distractor both using the euclidean distance and the cosine similarity.\\
-Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidean distance between objects is higher than the one computed using Resnet50 (about 17 times more), while the overall performance of the sequential scan search (measured by the mAP) is better, by about 18\%.
+Moreover it is interesting to notice that using Resnet50v2 to extract the features from the images, the average distance computed using the euclidean distance between objects is higher than the one computed using Resnet50 (about 17 times more), while the overall performance of the sequential scan search (measured by the mAP) is better, by about 18\%.\\
+This is already anticipated in the analisys of \textit{section 5.1}.
 
 
 
 \subsubsection{LSH Index after Features Extraction, using Resnet50v2}
-During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a fine tuning technique and we computed a kNN search, obtaining the following results:
+During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a features extraction technique and we computed a kNN search, obtaining the following results:
 \begin{center}
 \begin{tabular}{|l|cc|cc|c|}
 \hline
@@ -483,7 +484,7 @@ In the next approach, fine tuning, we will see that this phenomenon will be buff
 
 \section{Fine Tuning approach}
 During this phase we carried out several tests using different hyperparameters for the fully connected part added at the end both of the networks Resnet50 and Resnet50v2.\\
-We compute this phase adopting a trial and error approach, trying different hyperparameter values for the fully connected neural network appended to the pretrained convolutional one and we compared the performance.\\
+We computed this phase adopting a \textbf{trial and error approach}, trying different hyperparameter values for the fully connected neural network appended to the pretrained convolutional one and we compared the performance.\\
 We stopped the training exploiting an \textit{early stopping condition}, monitoring the loss function and setting the patience value equal to 10 and restoring the weights to 10 epochs before.\\
 The following subparagraphs show only the most relevant experiments, we didn't report all of them in order to avoid some redundancies.\\
 
@@ -914,45 +915,45 @@ During this section we extracted the features from the dataset using the pretrai
 \hline
  & \textbf{Accuracy} & \textbf{Loss} & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 4 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 & 32791\\
-\textbf{Model 5} & \textbf{0.8808} & \textbf{0.3772} &  \textbf{0.893} &  \textbf{8.997} & \textbf{0.908} & \textbf{0.729} & \textbf{32791}\\
+Model 3 & 0.8493 & 0.4819 &  0.875 & 16.684 & 0.886 & 0.661 & 32791\\
+\textbf{Model 4} & \textbf{0.8808} & \textbf{0.3772} &  \textbf{0.893} &  \textbf{8.997} & \textbf{0.908} & \textbf{0.729} & \textbf{32791}\\
 \hline
 \end{tabular}
 \end{center}
 
 \subsubsection{LSH Index after Fine Tuning Resnet50v2}
 During this section we extracted the features from the dataset using the pretrained network Resnet50v2, adopting a fine tuning technique and we computed a kNN search, obtaining the results in the table below. \vspace{5mm} \\
-We finally chose the Model 5 with the hyperparameters $g=7, h=2, w=6$ because it has the higher value of mAP and it still visits a low number of objects.
+We finally chose the Model 4 with the hyperparameters $g=7, h=2, w=6$ because it has the higher value of mAP and it still visits a low number of objects.
 
 \begin{center}
 \begin{tabular}{|l|l|cc|cc|c|}
 \hline
    & Hyperparameters & \textbf{mAP} euclidean & avg dist & \textbf{mAP} cosine & avg sim & Items\\
 \hline
-Model 4 & g=4 h=2 w=5 &  0.725 & 22.231 & 0.793 & 0.478 & 266\\
-Model 4 & g=4 h=2 w=6 &  0.764 & 22.038 & 0.824 & 0.516 & 407\\
+Model 3 & g=4 h=2 w=5 &  0.725 & 22.231 & 0.793 & 0.478 & 266\\
+Model 3 & g=4 h=2 w=6 &  0.764 & 22.038 & 0.824 & 0.516 & 407\\
 \hline
-Model 4 & g=5 h=2 w=5 &  0.738 & 21.862 & 0.800 & 0.489 & 284\\
-Model 4 & g=5 h=2 w=6 &  0.760 & 21.431 & 0.822 & 0.504 & 423\\
+Model 3 & g=5 h=2 w=5 &  0.738 & 21.862 & 0.800 & 0.489 & 284\\
+Model 3 & g=5 h=2 w=6 &  0.760 & 21.431 & 0.822 & 0.504 & 423\\
 \hline
-Model 4 & g=6 h=2 w=5 &  0.710 & 21.759 & 0.801 & 0.486 & 254\\
-Model 4 & g=6 h=2 w=6 &  0.752 & 20.978 & 0.819 & 0.511 & 369\\
+Model 3 & g=6 h=2 w=5 &  0.710 & 21.759 & 0.801 & 0.486 & 254\\
+Model 3 & g=6 h=2 w=6 &  0.752 & 20.978 & 0.819 & 0.511 & 369\\
 \hline
-Model 4 & g=7 h=2 w=5 &  0.721 & 21.851 & 0.799 & 0.488 & 345\\
-\textbf{Model 4} & \textbf{g=7 h=2 w=6} &  \textbf{0.761} & \textbf{20.861} & \textbf{0.830} & \textbf{0.519} & \textbf{532} \\
+Model 3 & g=7 h=2 w=5 &  0.721 & 21.851 & 0.799 & 0.488 & 345\\
+\textbf{Model 3} & \textbf{g=7 h=2 w=6} &  \textbf{0.761} & \textbf{20.861} & \textbf{0.830} & \textbf{0.519} & \textbf{532} \\
 \hline
 \hline
-Model 5 & g=4 h=2 w=5 &  0.790 & 11.181 & 0.840 & 0.611 & 724\\
-Model 5 & g=4 h=2 w=6 &  0.793 & 11.661 & 0.840 & 0.596 & 727\\
+Model 4 & g=4 h=2 w=5 &  0.790 & 11.181 & 0.840 & 0.611 & 724\\
+Model 4 & g=4 h=2 w=6 &  0.793 & 11.661 & 0.840 & 0.596 & 727\\
 \hline
-Model 5 & g=5 h=2 w=5 &  0.808 & 11.147 & 0.848 & 0.607 & 1061\\
-Model 5 & g=5 h=2 w=6 &  0.823 & 10.958 & 0.865 & 0.625 & 1534\\
+Model 4 & g=5 h=2 w=5 &  0.808 & 11.147 & 0.848 & 0.607 & 1061\\
+Model 4 & g=5 h=2 w=6 &  0.823 & 10.958 & 0.865 & 0.625 & 1534\\
 \hline
-Model 5 & g=6 h=2 w=5 &  0.797 & 10.887 & 0.847 & 0.616 & 704\\
-Model 5 & g=6 h=2 w=6 &  0.777 & 10.958 & 0.838 & 0.616 & 1012\\
+Model 4 & g=6 h=2 w=5 &  0.797 & 10.887 & 0.847 & 0.616 & 704\\
+Model 4 & g=6 h=2 w=6 &  0.777 & 10.958 & 0.838 & 0.616 & 1012\\
 \hline
-Model 5 & g=7 h=2 w=5 &  0.814 & 11.293 & 0.863 & 0.606 & 1007\\
-\textbf{Model 5} & \textbf{g=7 h=2 w=6} &  \textbf{0.829} & \textbf{11.002} & \textbf{0.861} & \textbf{0.623} & \textbf{1440} \\
+Model 4 & g=7 h=2 w=5 &  0.814 & 11.293 & 0.863 & 0.606 & 1007\\
+\textbf{Model 4} & \textbf{g=7 h=2 w=6} &  \textbf{0.829} & \textbf{11.002} & \textbf{0.861} & \textbf{0.623} & \textbf{1440} \\
 \hline
 \end{tabular}
 \vspace{1mm}
@@ -982,7 +983,8 @@ Below there are some histograms summarizing the results obtained with the Resnet
 \end{figure}
 
 
-In this case, the partial re-training of the network brought the mAP to 86\% using the index, whereas before it was 82\%. This value of mAP is the highest obtained so far with LSH index search. The number of visited objects is raised compared to the feature extraction data, from 685 to 1440, still remaining lower than the Resnet50 data. This is given by the fact that in the first approach we selected $w=8$ in the index creation, while in the second approach $w=6$ was enough to obtain a high average similarity and a high mAP.
+In this case, the partial re-training of the network brought the mAP to 86\% using the index, whereas before it was 82\%. This value of mAP is the highest obtained so far with LSH index search. The number of visited objects is raised compared to the feature extraction data, from 685 to 1440, still remaining lower than the Resnet50 data.\\ 
+This is given by the fact that the fine tuning technique has made the features closer than features extraction: indeed in the first approach we selected $w=8$ in the index creation, while in the second approach $w=6$ was enough to obtain a high average similarity and a high mAP.
 
 \vspace{3mm}
 
@@ -993,7 +995,7 @@ In order to better compare the obtained results, we reported some other histogra
 The data included are both from the sequential search and the LSH index search. For the latter, the hyper-parameters taken for the comparison are:
 \begin{itemize}
 \item Resnet50 (model 4): $g=5, h=2, w=4$
-\item Resnet50v2 (model 5): $g=7, h=2, w=6$
+\item Resnet50v2 (model 4): $g=7, h=2, w=6$
 \end{itemize}
 \vspace{3mm}
 We see that, for the same average objects visited per query, the model built on Resnet50v2 offers much higher performance, with a mAp of 86\%, versus Resnet50's 73\%. 
